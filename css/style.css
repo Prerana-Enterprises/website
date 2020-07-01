@@ -55,16 +55,15 @@ nav ul li
 nav ul li a
 {
 	position: relative;
-	color: #000;
+	color: #393185;
 	font-size: 18px;
-	text-transform: uppercase;
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
 nav ul li a:hover
 {
 	text-decoration: none;
-	color: #000;
+	color: #393185;
 }
 
 nav ul li a:before
@@ -75,13 +74,19 @@ nav ul li a:before
 	bottom: 0;
 	height: 3px;
 	width: 100%;
-	background: #000;
+	background: #e85022;
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform .4s linear;
 }
 
-nav ul li a:hover:before
+nav ul li:hover a:before
+{
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.active a:before
 {
 	transform: scaleX(1);
 	transform-origin: left;
@@ -127,7 +132,7 @@ label #bars
 	}
 }
 
-@media (max-width: 560px)
+@media (max-width: 740px)
 {
 	label #bars
 	{
@@ -147,6 +152,7 @@ label #bars
 		transition: all .5s;
 		padding: 0;
 		z-index: 101;
+		border-top: 1px solid;
 	}
 
 	nav ul li
@@ -157,7 +163,7 @@ label #bars
 
 	nav ul li a
 	{
-		font-size: 20px;
+		font-size: 15px;
 	}
 
 	nav ul li a:nth-child(1)
@@ -188,7 +194,7 @@ label #bars
 	
 	nav ul li a
 	{
-		font-size: 17px;
+		font-size: 15px;
 	}
 
 	#check:checked ~ ul
@@ -202,6 +208,14 @@ label #bars
 	#check:checked ~ ul li a
 	{
 		left: 0;
+	}
+}
+
+@media(max-width: 420px)
+{
+	nav ul li a
+	{
+		font-size: 12px;
 	}
 }
 
