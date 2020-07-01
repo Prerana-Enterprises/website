@@ -22,3 +22,199 @@ body
   font-family: title;
   src: url(../fonts/franklin_gothic_book.ttf);
 }
+
+nav
+{
+	height: 50px;
+	background: #fff;
+	position: sticky;
+}
+
+nav img
+{
+	height: 40px;
+	position: absolute;
+	top: 5px;
+	left: 12%;
+}
+
+nav ul
+{
+	float: right;
+	margin-right: 12%;
+	list-style: none;
+}
+
+nav ul li
+{
+	display: inline-block;
+	line-height: 50px;
+	margin: 0 15px;
+}
+
+nav ul li a
+{
+	position: relative;
+	color: #000;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 5px 0;
+}
+
+nav ul li a:hover
+{
+	text-decoration: none;
+	color: #000;
+}
+
+nav ul li a:before
+{
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 100%;
+	background: #000;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+
+nav ul li a:hover:before
+{
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+label
+{
+	display: initial;
+}
+
+label #bars
+{
+	color: #000;
+	font-size: 20px;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	margin-top: 15px;
+	display: none;
+	transition: .2s linear;
+}
+
+#check
+{
+	display: none;
+}
+
+@media (max-width: 944px)
+{
+	nav img
+	{
+		left: 8%;
+	}
+
+	nav ul
+	{
+		margin-right: 8%;
+	}
+	
+	nav ul li a
+	{
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 560px)
+{
+	label #bars
+	{
+		display: block;
+		line-height: 30;
+	}
+
+	nav ul
+	{
+		position: fixed;
+		width: 40%;
+		height: 100vh;
+		background: rgba(0,0,0,0.1);
+		top: 50px;
+		right: -100%;
+		text-align: center;
+		transition: all .5s;
+		padding: 0;
+		z-index: 101;
+	}
+
+	nav ul li
+	{
+		display: block;
+		transition: 5s;
+	}
+
+	nav ul li a
+	{
+		font-size: 20px;
+	}
+
+	nav ul li a:nth-child(1)
+	{
+		left: 200px;
+		transition: ease-in .4s;
+	}
+	nav ul li:nth-child(2) a
+	{
+		left: 225px;
+		transition: ease-in .45s;
+	}
+	nav ul li:nth-child(3) a
+	{
+		left: 250px;
+		transition: ease-in .5s;
+	}
+	nav ul li:nth-child(4) a
+	{
+		left: 275px;
+		transition: ease-in .55s;
+	}
+
+	nav img
+	{
+		left: 8%;
+	}
+	
+	nav ul li a
+	{
+		font-size: 17px;
+	}
+
+	#check:checked ~ ul
+	{
+		right: 0;
+		margin-right: 0;
+		padding-right: 0;
+		z-index: 101;
+	}
+
+	#check:checked ~ ul li a
+	{
+		left: 0;
+	}
+}
+
+#notnav
+{
+	position: fixed;
+	height: 100%;
+	width: 60%;
+	background: rgba(0,0,0,0.7);
+	z-index: 10;
+}
+
+.nodisplay
+{
+	display: none;
+}

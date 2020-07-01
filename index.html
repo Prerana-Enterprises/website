@@ -35,13 +35,13 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="">
 
 	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-add-css="false"></script>
-    <link href="https://use.fontawesome.com/releases/v5.13.0/css/svg-with-js.css" rel="stylesheet" />
+	<link href="https://use.fontawesome.com/releases/v5.13.0/css/svg-with-js.css" rel="stylesheet" />
 
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="images/favicon.png" type="image/png">
 
-    <!-- CSS only -->
+	<!-- CSS only -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 	<!-- JS, Popper.js, and jQuery -->
@@ -53,6 +53,65 @@
 
 </head>
 <body>
+
+	<nav class="sticky-top">
+		<input type="checkbox" id="check" onchange="black();">
+		<label for="check">
+			<i class="fas fa-bars" id="bars"></i>
+		</label>
+		<a href="#"><img src="images/logo.png" alt="Prerana Enterprises"></a>
+		<ul>
+			<li><a href="#">Item 1</a></li>
+			<li><a href="#">Item 2</a></li>
+			<li><a href="#">Item 3</a></li>
+			<li><a href="#">Item 4</a></li>
+		</ul>
+	</nav>
+
+
+<div id="notnav" class="nodisplay"></div>
+
+
+
+<script type="text/javascript">
+	
+	function black(){
+		if(document.getElementById('check').checked)
+		{
+			setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
+			document.getElementById('bars').style.transform = 'rotate(-90deg)';
+			setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
+			setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(-270deg)';}, 100);
+		}
+		else
+		{
+			document.getElementById('notnav').classList.toggle('nodisplay');
+			document.getElementById('bars').style.transform = 'rotate(-180deg)';
+			setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
+			setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(0deg)';}, 100);
+		}
+	}
+
+	window.onresize = function() {
+		if(document.getElementById('check').checked)
+		{
+			if(screen.width<=560)
+			{
+				document.getElementById('notnav').classList.remove('nodisplay');
+			}
+			else
+			{
+				document.getElementById('notnav').classList.add('nodisplay');
+			}
+		}
+	}
+
+	document.getElementById('notnav').onclick = function() {
+		document.getElementById('check').checked=false;
+		black();
+	}
+	
+</script>
 
 </body>
 </html>
