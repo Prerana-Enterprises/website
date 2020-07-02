@@ -27,7 +27,6 @@ nav
 {
 	height: 50px;
 	background: #fff;
-	position: sticky;
 }
 
 nav img
@@ -145,7 +144,7 @@ label #bars
 		position: fixed;
 		width: 40%;
 		height: 100vh;
-		background: rgba(0,0,0,0.1);
+		background: rgba(254,254,254,1);
 		top: 50px;
 		right: -100%;
 		text-align: center;
@@ -202,7 +201,6 @@ label #bars
 		right: 0;
 		margin-right: 0;
 		padding-right: 0;
-		z-index: 101;
 	}
 
 	#check:checked ~ ul li a
@@ -222,13 +220,24 @@ label #bars
 #notnav
 {
 	position: fixed;
-	height: 100%;
-	width: 60%;
+	height: 200vh;
+	width: 100%;
 	background: rgba(0,0,0,0.7);
 	z-index: 10;
+	top: -200px;
 }
 
 .nodisplay
 {
 	display: none;
 }
+
+.banner-name
+{
+	font-family: title;
+	color: #393185;
+	text-shadow: 1px 0 0 #e85022, -1px 0 0 #e85022, 0 1px 0 #e85022, 0 -1px 0 #e85022, 1px 1px 0 #e85022, 1px -1px 0 #e85022, -1px 1px 0 #e85022, -1px -1px 0 #e85022;
+	font-size: 50px;
+}
+
+@media(max-width: )
