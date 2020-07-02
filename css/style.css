@@ -152,7 +152,7 @@ label #bars
 		transition: all .5s;
 		padding: 0;
 		z-index: 101;
-		border-top: 1px solid;
+		border-top: 1px solid rgba(0,0,0,0.5);
 	}
 
 	nav ul li
