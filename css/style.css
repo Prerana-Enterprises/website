@@ -27,6 +27,7 @@ nav
 {
 	height: 50px;
 	background: #fff;
+	width: 100%;
 }
 
 nav img
@@ -42,6 +43,7 @@ nav ul
 	float: right;
 	margin-right: 12%;
 	list-style: none;
+	margin-bottom: 0;
 }
 
 nav ul li
@@ -240,4 +242,124 @@ label #bars
 	font-size: 50px;
 }
 
-@media(max-width: )
+.slide
+{
+	position: fixed;
+}
+
+.click
+{
+	transform: rotate(-90deg);
+	position: fixed;
+	bottom: 150px;
+	width: 100px;
+	right: -30px;
+	transition: .5s;
+	margin-right: -50px;
+	background: #e85022;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.bait
+{
+	position: fixed;
+	bottom: 112px;
+	right: -50px;
+	transition: .5s;
+	height: 100px;
+	line-height: 25px;
+	padding-left: 15px;
+	margin-right: -50px;
+	background: #e85022;
+}
+
+.subname
+{
+	font-size: 50px;
+	font-family: title;
+}
+
+@media(max-width: 773px)
+{
+	.subname
+	{
+		font-size: 40px;
+	}
+}
+
+@media(max-width: 481px)
+{
+	.subname
+	{
+		font-size: 35px;
+	}
+}
+
+@media(max-width: 351px)
+{
+	.subname
+	{
+		font-size: 30px;
+	}
+}
+
+.client-logo
+{
+	width: 70%;
+}
+
+@media(max-width: 499px)
+{
+	.client-logo
+	{
+		width: 80%; 
+	}
+}
+
+@media(max-width: 450px)
+{
+	.client-logo
+	{
+		width: 100%; 
+	}
+}
+
+.client-name
+{
+	font-size: 20px;
+}
+
+@media(max-width: 767px)
+{
+	.client-name
+	{
+		font-size: 17px;
+	}
+}
+
+@media(max-width: 531px)
+{
+	.client-name
+	{
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 486px)
+{
+	.client-name
+	{
+		font-size: 13px;
+	}
+}
+
+@media(max-width: 441px)
+{
+	.client-name
+	{
+		font-size: 12px;
+	}
+}

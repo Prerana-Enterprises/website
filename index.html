@@ -56,7 +56,7 @@
 
 	<div class="banner">
 
-		<nav class="sticky-top">
+		<nav>
 			<input type="checkbox" id="check" onchange="black();">
 			<label for="check">
 				<i class="fas fa-bars" id="bars"></i>
@@ -79,8 +79,51 @@
 
 <div id="notnav" class="nodisplay"></div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias velit praesentium assumenda aperiam, repellat. Odit consequatur officiis alias provident? Magni accusamus aperiam autem, voluptates impedit facilis quibusdam molestias minus.</p>
+<div class="slide" id="slide">
+	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
+	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
+</div>
 
+<div class="client-list">
+	<h2 class="text-center subname mx-1">Our Proud Clients</h2>
+	<div class="row m-3">
+		
+		<div class="col-3 text-center mb-3 mt-md-3">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center mb-3 mt-md-3">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center mb-3 mt-md-3">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center mb-3 mt-md-3">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		<div class="col-3 text-center">
+			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
+			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		</div>
+		
+	</div>
+
+</div>
 
 
 <script type="text/javascript">
@@ -120,6 +163,37 @@
 		document.getElementById('check').checked=false;
 		black();
 	}
+
+	window.onscroll = function() {
+		if(window.scrollY>50)
+		{
+			if(document.getElementById('click').style.marginRight != '100px')
+			{
+				document.getElementById('click').style.marginRight = '0px';
+				document.getElementById('bait').style.marginRight = '0px';
+			}
+		}
+		else
+		{
+			document.getElementById('click').style.marginRight = '-50px';
+			document.getElementById('bait').style.marginRight = '-50px';
+		}
+	}
+
+	function slidein() {
+		if(document.getElementById('bait').style.marginRight == '0px')
+		{
+			document.getElementById('click').style.marginRight = '100px';
+			document.getElementById('bait').style.marginRight = '100px';
+		}
+		else
+		{
+			document.getElementById('click').style.marginRight = '0px';
+			document.getElementById('bait').style.marginRight = '0px';
+		}
+	}
+
+	
 	
 </script>
 
