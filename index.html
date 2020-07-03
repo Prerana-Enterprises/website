@@ -69,61 +69,62 @@
 				<li><a href="#"><i class="far fa-address-card"></i> Contact Us</a></li>
 			</ul>
 		</nav>
+		<!--
 		<br>
 		<div class="text-center container">
 			<h1 class="banner-name"><b>PRERANA ENTERPRISES</b></h1>
 		</div>
+	-->
 
 	</div>
 
 
 <div id="notnav" class="nodisplay"></div>
 
-<div class="slide" id="slide">
+
+
+
 	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
 	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
-</div>
 
-<div class="client-list">
-	<h2 class="text-center subname mx-1">Our Proud Clients</h2>
-	<div class="row m-3">
-		
-		<div class="col-3 text-center mb-3 mt-md-3">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
+<h2 class="text-center subname pt-5 pb-md-5 pb-4" id="proud-client">Our Proud Clients</h2>
+
+<div class="proud pb-4">
+	<div class="t1" id="t1">
+
+		<div class="a1">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/longlogo.jpg" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
 		</div>
-		<div class="col-3 text-center mb-3 mt-md-3">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		<div class="a2">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
 		</div>
-		<div class="col-3 text-center mb-3 mt-md-3">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		<div class="a3">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
 		</div>
-		<div class="col-3 text-center mb-3 mt-md-3">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
+		<div class="a4">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
 		</div>
-		<div class="col-3 text-center">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
-		</div>
-		<div class="col-3 text-center">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
-		</div>
-		<div class="col-3 text-center">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
-		</div>
-		<div class="col-3 text-center">
-			<img src="images/logo.png" class="client-logo" alt="Prerana Enterprises">
-			<div class="client-name text-center pt-1">Prerana Ent.</div>
-		</div>
-		
+
 	</div>
+	<div class="container text-right mt-md-5 mt-4"><a href="#" class="btn btn-primary review-btn">Read Reviews</a></div>
 
 </div>
+
+
+
+
 
 
 <script type="text/javascript">
@@ -193,7 +194,31 @@
 		}
 	}
 
-	
+	function dyheight() {
+		let hlist = document.getElementsByClassName('test');
+		max = hlist[0].clientHeight;
+		for(var i=1; i<hlist.length; i++)
+		{
+			if(hlist[i].clientHeight>max)
+			{
+				max=hlist[i].clientHeight;
+			}
+		}
+		for(var i=0; i<hlist.length; i++)
+		{
+			hlist[i].style.top = (max/2)+'px';
+			hlist[i].style.marginTop = '-'+(hlist[i].clientHeight/2)+'px';
+		}
+		document.getElementById('t1').style.height = max+'px';
+
+	}
+
+	dyheight();
+
+	window.onresize = function() {
+		dyheight();
+	}
+		
 	
 </script>
 

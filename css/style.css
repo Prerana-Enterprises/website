@@ -28,6 +28,8 @@ nav
 	height: 50px;
 	background: #fff;
 	width: 100%;
+	z-index: 1000;
+	position: fixed;
 }
 
 nav img
@@ -146,7 +148,7 @@ label #bars
 		position: fixed;
 		width: 40%;
 		height: 100vh;
-		background: rgba(254,254,254,1);
+		background: #eae5e5;
 		top: 50px;
 		right: -100%;
 		text-align: center;
@@ -241,12 +243,6 @@ label #bars
 	text-shadow: 1px 0 0 #e85022, -1px 0 0 #e85022, 0 1px 0 #e85022, 0 -1px 0 #e85022, 1px 1px 0 #e85022, 1px -1px 0 #e85022, -1px 1px 0 #e85022, -1px -1px 0 #e85022;
 	font-size: 50px;
 }
-
-.slide
-{
-	position: fixed;
-}
-
 .click
 {
 	transform: rotate(-90deg);
@@ -280,6 +276,7 @@ label #bars
 {
 	font-size: 50px;
 	font-family: title;
+	margin-bottom: 0;
 }
 
 @media(max-width: 773px)
@@ -306,60 +303,175 @@ label #bars
 	}
 }
 
-.client-logo
+.t1
 {
-	width: 70%;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
 }
 
-@media(max-width: 499px)
+.a1
 {
-	.client-logo
+	position: absolute;
+	width: 100%;
+	animation-name: scrolling;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+	visibility: visible;
+	animation-timing-function: linear;
+}
+
+.a2
+{
+	position: absolute;
+	width: 100%;
+	animation-name: scrollingtwo;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+	visibility: visible;
+	animation-timing-function: linear;
+}
+
+.a3
+{
+	position: absolute;
+	width: 100%;
+	animation-name: scrollingtwo;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+	visibility: visible;
+	animation-timing-function: linear;
+	animation-delay: 7s;
+	left: 100%;
+}
+
+.a4
+{
+	position: absolute;
+	width: 100%;
+	animation-name: scrollingtwo;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+	visibility: visible;
+	animation-timing-function: linear;
+	animation-delay: 14s;
+	left: 100%;
+}
+
+@keyframes scrolling
+{
+	0%{left: 0; visibility: visible;}
+	25%{left: -100%; visibility: hidden;}
+	75%{left: 100%; visibility: hidden;}
+	100%{left: 0; visibility: visible;}
+}
+
+@keyframes scrollingtwo
+{
+	0%{left: 100%; visibility: visible;}
+	50%{left: -100%; visibility: hidden;}
+	100%{left: 100%; visibility: hidden;}
+}
+
+.test
+{
+	position: absolute;
+	width: 19%;
+}
+
+.t1 .a1 img:nth-child(1),
+.t1 .a2 img:nth-child(1),
+.t1 .a3 img:nth-child(1),
+.t1 .a4 img:nth-child(1)
+{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.t1 .a1 img:nth-child(2),
+.t1 .a2 img:nth-child(2),
+.t1 .a3 img:nth-child(2),
+.t1 .a4 img:nth-child(2)
+{
+	margin-left: 28%;
+	margin-right: 3%;
+}
+
+.t1 .a1 img:nth-child(3),
+.t1 .a2 img:nth-child(3),
+.t1 .a3 img:nth-child(3),
+.t1 .a4 img:nth-child(3)
+{
+	margin-left: 53%;
+	margin-right: 3%;
+}
+
+.t1 .a1 img:nth-child(4),
+.t1 .a2 img:nth-child(4),
+.t1 .a3 img:nth-child(4),
+.t1 .a4 img:nth-child(4)
+{
+	margin-left: 78%;
+	margin-right: 320
+}
+
+.review-btn
+{
+	width: 20%;
+	font-size: 18px;
+}
+
+@media(max-width: 991px)
+{
+	.review-btn
 	{
-		width: 80%; 
+		font-size: 16px;
 	}
-}
-
-@media(max-width: 450px)
-{
-	.client-logo
-	{
-		width: 100%; 
-	}
-}
-
-.client-name
-{
-	font-size: 20px;
 }
 
 @media(max-width: 767px)
 {
-	.client-name
+	.review-btn
 	{
-		font-size: 17px;
+		font-size: 14px;
+		width: 30%;
 	}
 }
 
-@media(max-width: 531px)
+@media(max-width: 417px)
 {
-	.client-name
-	{
-		font-size: 15px;
-	}
-}
-
-@media(max-width: 486px)
-{
-	.client-name
-	{
-		font-size: 13px;
-	}
-}
-
-@media(max-width: 441px)
-{
-	.client-name
+	.review-btn
 	{
 		font-size: 12px;
 	}
+}
+
+@media(max-width: 374px)
+{
+	.review-btn
+	{
+		font-size: 12px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+@media(max-width: 328px)
+{
+	.review-btn
+	{
+		font-size: 12px;
+		padding-right: 3px;
+		padding-left: 3px;
+	}
+}
+
+.proud
+{
+	background: rgba(0,0,0,0.04);
+}
+
+#proud-client
+{
+	background: rgba(0,0,0,0.04);
 }
