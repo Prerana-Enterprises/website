@@ -51,6 +51,30 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
+
+	<script type="text/javascript">
+		function dyheight() {
+			let hlist = document.getElementsByClassName('test');
+			max = hlist[0].clientHeight;
+			for(var i=1; i<hlist.length; i++)
+			{
+				if(hlist[i].clientHeight>max)
+				{
+					max=hlist[i].clientHeight;
+				}
+			}
+			for(var i=0; i<hlist.length; i++)
+			{
+				hlist[i].style.top = (max/2)+'px';
+				hlist[i].style.marginTop = (-hlist[i].clientHeight/2)+'px';
+			}
+			document.getElementById('t1').style.height = max+'px';
+
+			document.getElementById('photo-stack').style.height = (document.getElementById('stack-pics').clientHeight + 10)+'px';
+
+		}
+	</script>
+
 </head>
 <body>
 
@@ -93,39 +117,54 @@
 	<div class="t1" id="t1">
 
 		<div class="a1">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/longlogo.jpg" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/longlogo.jpg" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
 		</div>
 		<div class="a2">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
 		</div>
 		<div class="a3">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
 		</div>
 		<div class="a4">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
-			<img src="images/logo.png" class="test" alt="Prerana Enterprises">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
+			<img src="images/logo.png" class="test" alt="Prerana Enterprises" onload="dyheight();">
 		</div>
 
 	</div>
-	<div class="container text-right mt-md-5 mt-4"><a href="#" class="btn btn-primary review-btn">Read Reviews</a></div>
+	<div class="container text-right mt-md-5 mt-4"><p class="text-left home-happy">We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</p><a href="#" class="btn btn-primary review-btn">Read Reviews</a></div>
 
 </div>
 
 
 
 
+<h2 class="text-center subname pt-3 pb-md-5 pb-4">More About Us</h2>
 
+<div class="row home-product text-center">
+	<div class="col-md-5 col-12">
+		<div class='photo-stack' id="photo-stack">
+		  <img src='http://placekitten.com/300/200' class="stack-pics" id="stack-pics" onload="dyheight();">
+		  <img src='http://placekitten.com/300/200?image=2' class="stack-pics" id="stack-pics">
+		  <img src='http://placekitten.com/300/200?image=3' class="stack-pics">
+		  <img src='http://placekitten.com/300/200?image=4' class="stack-pics">
+		  <img src='http://placekitten.com/300/200?image=5' class="stack-pics">
+		</div>
+	</div><div class="col-md-7 col-12">
+
+	</div>
+</div>
+hi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sequi esse, officiis vel consequuntur, aspernatur, similique ea aut, sit modi nemo? Dolor voluptatum aliquam quae, eum eligendi totam recusandae quis!
 
 <script type="text/javascript">
 	
@@ -194,30 +233,19 @@
 		}
 	}
 
-	function dyheight() {
-		let hlist = document.getElementsByClassName('test');
-		max = hlist[0].clientHeight;
-		for(var i=1; i<hlist.length; i++)
-		{
-			if(hlist[i].clientHeight>max)
-			{
-				max=hlist[i].clientHeight;
-			}
-		}
-		for(var i=0; i<hlist.length; i++)
-		{
-			hlist[i].style.top = (max/2)+'px';
-			hlist[i].style.marginTop = '-'+(hlist[i].clientHeight/2)+'px';
-		}
-		document.getElementById('t1').style.height = max+'px';
 
-	}
 
-	dyheight();
 
 	window.onresize = function() {
-		dyheight();
+		setTimeout(function() {dyheight();}, 350);
 	}
+
+	setInterval(function() {
+		sp = document.getElementsByClassName('stack-pics');
+		ele = sp[0];
+		sp[0].remove();
+		document.getElementById('photo-stack').appendChild(ele);
+	}, 3000);
 		
 	
 </script>
