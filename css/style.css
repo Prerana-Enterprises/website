@@ -247,7 +247,7 @@ label #bars
 {
 	transform: rotate(-90deg);
 	position: fixed;
-	bottom: 150px;
+	bottom: 250px;
 	width: 100px;
 	right: -35px;
 	transition: .5s;
@@ -263,7 +263,7 @@ label #bars
 .bait
 {
 	position: fixed;
-	bottom: 112px;
+	bottom: 212px;
 	right: -55px;
 	transition: .5s;
 	height: 100px;
@@ -651,4 +651,9 @@ label #bars
 	{
 		font-size: 14px;
 	}
+}
+
+#footer-image
+{
+	width: 20px;
 }

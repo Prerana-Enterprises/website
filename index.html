@@ -71,7 +71,9 @@
 			document.getElementById('t1').style.height = max+'px';
 
 			document.getElementById('photo-stack').style.height = (document.getElementById('stack-pics').clientHeight + 10)+'px';
-
+			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
+			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
 		}
 	</script>
 
@@ -152,50 +154,50 @@
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
-				<div class="col-10 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
+				<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
-				<div class="col-10 text-justify pb-2">Provide affordable solutions to clients.</div>
+				<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
 			</div>
 		</div>
 
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
-				<div class="col-10 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
+				<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
-				<div class="col-1 text-right mx-0 px-0"><i class="fab fa-staylinked"></i></div>
-				<div class="col-10 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
+				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
+				<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
-				<div class="col-10 text-justify pb-2">Achieve complete customer satisfaction.</div>
+				<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
-				<div class="col-10 text-justify pb-2">Improve our services continuously.</div>
+				<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="fas fa-comments"></i></div>
-				<div class="col-10 text-justify">Encourage communication to achieve the highest standard of performance.</div>
+				<div class="col-11 text-justify">Encourage communication to achieve the highest standard of performance.</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
 			<div class="row">
 				<div class="col-1 text-right mx-0 px-0"><i class="far fa-question-circle"></i></div>
-				<div class="col-10 text-justify">Resolve all queries of customers.</div>
+				<div class="col-11 text-justify">Resolve all queries of customers.</div>
 			</div>
 		</div>
 	</div>
@@ -204,7 +206,7 @@
 
 <h2 class="text-center subname pt-3 pb-md-5 pb-4">More About Us</h2>
 
-<div class="row home-product text-center">
+<div class="row home-product text-center mb-5">
 	<div class="col-md-5 col-12">
 		<div class='photo-stack' id="photo-stack">
 		  <img src='http://placekitten.com/300/200' class="stack-pics" id="stack-pics" onload="dyheight();">
@@ -221,6 +223,52 @@
 		</div>
 	</div>
 </div>
+
+
+<footer class="footer container">
+	<div class="row">
+
+
+		<div class="col-lg-4 col-sm-6 col-12">
+			<div class="ml-sm-3 ml-5 mb-3"><b>Contact Details</b></div>
+			<div class="row">
+				<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
+				<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
+				<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
+				<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+			</div>
+		</div>
+
+
+		<div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-4">
+			<div class="ml-sm-3 ml-5 mb-3"><b>Reach Out To Us</b></div>
+			<div class="row">
+				<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
+				<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
+			</div>
+			<div>
+				<a href="#" class="btn btn-success py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+				<a href="#" class="btn btn-light py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-map-marker-alt"></i> Location</a>
+				<a href="#" class="btn btn-primary py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-phone-alt"></i> Call Us</a>
+			</div>
+		</div>
+
+
+		<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block mt-1" id="footer-3">
+			<div class="w-75 mx-auto" id="footer-image-div">
+				<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
+			</div>
+		</div>
+
+
+	</div>
+</footer>
 
 
 <script type="text/javascript">
