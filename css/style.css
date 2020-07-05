@@ -217,7 +217,15 @@ label #bars
 {
 	nav ul li a
 	{
-		font-size: 12px;
+		font-size: 14px;
+	}
+}
+
+@media(max-width: 345px)
+{
+	nav ul li a
+	{
+		font-size: 13px;
 	}
 }
 
@@ -656,4 +664,48 @@ label #bars
 #footer-image
 {
 	width: 20px;
+}
+
+#full-footer
+{
+	background: #afafaf;
+}
+
+.main-footer
+{
+	background: #dbdbdb;
+}
+
+.footer-head
+{
+	font-size: 23px;
+}
+
+.footer-data
+{
+	font-size: 16px;
+}
+
+.credit-box
+{
+	background: #dbdbdb;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.credit
+{
+	font-size: 10px;
+	opacity: 0.5;
+	transition: 0.4s;
+}
+
+.credit:hover
+{
+	opacity: 1;
+}
+
+.copyright
+{
+	background: #afafaf;
 }

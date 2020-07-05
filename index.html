@@ -255,51 +255,56 @@
 </div>
 
 
-<footer class="footer pt-3" id="full-footer">
-	<div class="container">
-		<div class="row">
+<footer class="footer" id="full-footer">
+	<div class="main-footer  pt-3">
+		<div class="container">
+			<div class="row">
 
 
-			<div class="col-lg-4 col-sm-6 col-12">
-				<div class="ml-sm-3 ml-5 mb-3"><b>Contact Details</b></div>
-				<div class="row">
-					<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
-					<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+				<div class="col-lg-4 col-sm-6 col-12">
+					<div class="ml-sm-3 ml-0 text-sm-left text-center mb-3 footer-head"><b>Contact Details</b></div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
+						<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
+						<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
+						<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
-					<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+
+
+				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4">
+					<div class="ml-sm-3 ml-0 mb-3 footer-head text-sm-left text-center"><b>Reach Out To Us</b></div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
+						<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
+					</div>
+					<div class="text-center text-lg-left">
+						<a href="#" class="btn btn-success py-1 px-1 ml-sm-2 mx-2 mt-1"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+						<a href="#" class="btn btn-light py-1 px-1 ml-sm-2 mx-2 mt-1"><i class="fas fa-map-marker-alt"></i> Location</a>
+						<a href="#" class="btn btn-primary py-1 px-1 ml-sm-2 mx-2 mt-1"><i class="fas fa-phone-alt"></i> Call Us</a>
+					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
-					<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+
+
+				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
+					<div class="w-75 mx-auto" id="footer-image-div">
+						<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
+					</div>
 				</div>
+
+
 			</div>
-
-
-			<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4">
-				<div class="ml-sm-3 ml-5 mb-3"><b>Reach Out To Us</b></div>
-				<div class="row">
-					<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
-					<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
-				</div>
-				<div>
-					<a href="#" class="btn btn-success py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-					<a href="#" class="btn btn-light py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-map-marker-alt"></i> Location</a>
-					<a href="#" class="btn btn-primary py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-phone-alt"></i> Call Us</a>
-				</div>
-			</div>
-
-
-			<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
-				<div class="w-75 mx-auto" id="footer-image-div">
-					<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
-				</div>
-			</div>
-
-
 		</div>
 	</div>
+	<div class="credit-box py-0 my-0"><div class="text-right credit container py-0 my-0">Website by Abhishek Joshi<br>+919757468857</div></div>
+
+	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
 </footer>
 
 
@@ -308,11 +313,13 @@
 	
 
 	window.onresize = function() {
+		console.log('fire');
 		if(document.getElementById('check').checked)
 		{
 			if(screen.width<=740)
 			{
 				document.getElementById('notnav').classList.remove('nodisplay');
+				console.log(document.getElementById('notnav').classList);
 			}
 			else
 			{
@@ -359,7 +366,23 @@
 
 
 	window.onresize = function() {
-		setTimeout(function() {dyheight();}, 350);
+
+		if(document.getElementById('check').checked)
+		{
+			if(screen.width<=740)
+			{
+				document.getElementById('notnav').classList.remove('nodisplay');
+			}
+			else
+			{
+				document.getElementById('notnav').classList.add('nodisplay');
+			}
+		}
+
+
+		setTimeout(function() {
+			dyheight();
+		}, 350);
 	}
 
 	setInterval(function() {
