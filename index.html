@@ -75,6 +75,36 @@
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
 		}
+
+
+		function black(){
+			if(document.getElementById('check').checked)
+			{
+				setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
+				document.getElementById('bars').style.transform = 'rotate(-90deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(-270deg)';}, 100);
+			}
+			else
+			{
+				document.getElementById('notnav').classList.toggle('nodisplay');
+				document.getElementById('bars').style.transform = 'rotate(-180deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(0deg)';}, 100);
+			}
+		}
+
+		function page_height() {
+			var doc_height = document.getElementsByTagName('body')[0].offsetHeight;
+			var view_height = screen.height;
+			if(doc_height<view_height)
+			{
+				document.getElementById('full-footer').style.marginTop = (view_height - doc_height) + 'px';
+				console.log('done');
+				console.log(document.getElementById('full-footer').style.marginTop);
+				console.log(document.getElementById('full-footer'));
+			}
+		}
 	</script>
 
 </head>
@@ -206,7 +236,7 @@
 
 <h2 class="text-center subname pt-3 pb-md-5 pb-4">More About Us</h2>
 
-<div class="row home-product text-center mb-5">
+<div class="row home-product text-center pb-5">
 	<div class="col-md-5 col-12">
 		<div class='photo-stack' id="photo-stack">
 		  <img src='http://placekitten.com/300/200' class="stack-pics" id="stack-pics" onload="dyheight();">
@@ -225,70 +255,57 @@
 </div>
 
 
-<footer class="footer container">
-	<div class="row">
+<footer class="footer pt-3" id="full-footer">
+	<div class="container">
+		<div class="row">
 
 
-		<div class="col-lg-4 col-sm-6 col-12">
-			<div class="ml-sm-3 ml-5 mb-3"><b>Contact Details</b></div>
-			<div class="row">
-				<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
-				<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+			<div class="col-lg-4 col-sm-6 col-12">
+				<div class="ml-sm-3 ml-5 mb-3"><b>Contact Details</b></div>
+				<div class="row">
+					<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
+					<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
+					<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
+					<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
-				<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+
+
+			<div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-4">
+				<div class="ml-sm-3 ml-5 mb-3"><b>Reach Out To Us</b></div>
+				<div class="row">
+					<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
+					<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
+				</div>
+				<div>
+					<a href="#" class="btn btn-success py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+					<a href="#" class="btn btn-light py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-map-marker-alt"></i> Location</a>
+					<a href="#" class="btn btn-primary py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-phone-alt"></i> Call Us</a>
+				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
-				<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+
+
+			<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block mt-1" id="footer-3">
+				<div class="w-75 mx-auto" id="footer-image-div">
+					<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
+				</div>
 			</div>
+
+
 		</div>
-
-
-		<div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-4">
-			<div class="ml-sm-3 ml-5 mb-3"><b>Reach Out To Us</b></div>
-			<div class="row">
-				<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
-				<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
-			</div>
-			<div>
-				<a href="#" class="btn btn-success py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-				<a href="#" class="btn btn-light py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-map-marker-alt"></i> Location</a>
-				<a href="#" class="btn btn-primary py-1 px-1 ml-sm-2 ml-3 mt-1"><i class="fas fa-phone-alt"></i> Call Us</a>
-			</div>
-		</div>
-
-
-		<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block mt-1" id="footer-3">
-			<div class="w-75 mx-auto" id="footer-image-div">
-				<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
-			</div>
-		</div>
-
-
 	</div>
 </footer>
 
 
 <script type="text/javascript">
 	
-	function black(){
-		if(document.getElementById('check').checked)
-		{
-			setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
-			document.getElementById('bars').style.transform = 'rotate(-90deg)';
-			setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
-			setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(-270deg)';}, 100);
-		}
-		else
-		{
-			document.getElementById('notnav').classList.toggle('nodisplay');
-			document.getElementById('bars').style.transform = 'rotate(-180deg)';
-			setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
-			setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(0deg)';}, 100);
-		}
-	}
+	
 
 	window.onresize = function() {
 		if(document.getElementById('check').checked)
@@ -351,6 +368,12 @@
 		sp[0].remove();
 		document.getElementById('photo-stack').appendChild(ele);
 	}, 3000);
+
+
+	window.onload = function() {
+		page_height();
+	};
+
 		
 	
 </script>
