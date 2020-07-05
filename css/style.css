@@ -713,6 +713,14 @@ label #bars
 	}
 }
 
+@media(max-width: 530px)
+{
+	.credit
+	{
+		opacity: 0.3;
+	}
+}
+
 .copyright
 {
 	background: #afafaf;
