@@ -705,6 +705,14 @@ label #bars
 	opacity: 1;
 }
 
+@media(max-width: 991px)
+{
+	.credit
+	{
+		font-size: 8px;
+	}
+}
+
 .copyright
 {
 	background: #afafaf;
