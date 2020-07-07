@@ -23,14 +23,23 @@ body
   src: url(../fonts/franklin_gothic_book.ttf);
 }
 
+.banner
+{
+	padding-top: 90px;
+	background: url(../images/sky.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 nav
 {
 	height: 50px;
-	background: #fff;
 	width: 100%;
 	z-index: 1000;
 	position: fixed;
 	top: 0;
+	background: transparent;
+	transition: 0.4s;
 }
 
 nav img
@@ -59,9 +68,10 @@ nav ul li
 nav ul li a
 {
 	position: relative;
-	color: #393185;
+	color: rgba(255,255,255,1);
 	font-size: 18px;
 	padding: 10px 0;
+	transition: 0.4s;
 }
 
 nav ul li a:hover
@@ -103,7 +113,7 @@ label
 
 label #bars
 {
-	color: #000;
+	color: #fff;
 	font-size: 20px;
 	float: right;
 	margin-right: 40px;
@@ -168,6 +178,7 @@ label #bars
 	nav ul li a
 	{
 		font-size: 15px;
+		color: #393185;
 	}
 
 	nav ul li a:nth-child(1)
@@ -228,6 +239,32 @@ label #bars
 	{
 		font-size: 13px;
 	}
+}
+
+.banner-title
+{
+	font-size: 43px;
+	line-height: 55px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media(max-width: 767px)
+{
+	.banner-title
+	{
+		font-size: 38px;
+		line-height: 50px;
+		margin-bottom: 0;
+	}
+}
+
+.banner-caption
+{
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 40px;
 }
 
 #notnav
@@ -830,4 +867,5 @@ label #bars
 .icon-color
 {
 	color: #393185;
+	opacity: 0.7;
 }

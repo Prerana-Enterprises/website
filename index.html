@@ -10,6 +10,9 @@
 	<meta name="author" content="Abhishek Joshi">
 
 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+
 	<!--whatsapp and fb-->
 	<meta property="og:title" content="Prerana Enterprises" />
 	<meta property="og:description" content="" />
@@ -53,6 +56,44 @@
 
 
 	<script type="text/javascript">
+		function navchange() {
+			if(window.scrollY>50)
+			{
+				document.getElementById('nav').style.background = 'rgba(255,255,255,0.95)';
+				let items = document.getElementsByClassName('navbar-item');
+				let i=0;
+				for(i=0;i<items.length;i++)
+				{
+					items[i].style.color = '#393185';
+				}
+				document.getElementById('bars').style.color = "#000";
+			}
+			else
+			{
+				document.getElementById('nav').style.background = 'transparent';
+				if(screen.width>740)
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = 'rgba(255,255,255,1)';
+					}
+				}
+				else
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = '#393185';
+					}
+				}
+				document.getElementById('bars').style.color = "#fff";	
+			}
+		}
+
+
 		function dyheight() {
 			let hlist = document.getElementsByClassName('test');
 			max = hlist[0].clientHeight;
@@ -81,6 +122,8 @@
 		function black(){
 			if(document.getElementById('check').checked)
 			{
+				document.getElementById('nav').style.background = '#fff';
+				document.getElementById('bars').style.color = "#000";
 				setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
 				document.getElementById('bars').style.transform = 'rotate(-90deg)';
 				setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
@@ -88,6 +131,7 @@
 			}
 			else
 			{
+				navchange();
 				document.getElementById('notnav').classList.toggle('nodisplay');
 				document.getElementById('bars').style.transform = 'rotate(-180deg)';
 				setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
@@ -126,25 +170,25 @@
 
 	<div class="banner">
 
-		<nav>
+		<nav id="nav">
 			<input type="checkbox" id="check" onchange="black();">
 			<label for="check">
 				<i class="fas fa-bars" id="bars"></i>
 			</label>
 			<a href="#"><img src="images/logo.png" alt="Prerana Enterprises"></a>
 			<ul>
-				<li class="active" id="active"><a href="javascript: void(0)"><i class="fas fa-home"></i> Home</a></li>
-				<li><a href="#"><i class="fas fa-file-contract"></i> About Us</a></li>
-				<li><a href="#"><i class="fas fa-box-open"></i> Our Products</a></li>
-				<li><a href="#"><i class="far fa-address-card"></i> Contact Us</a></li>
+				<li class="active" id="active"><a class="navbar-item" href="javascript: void(0)"><i class="fas fa-home"></i> Home</a></li>
+				<li><a class="navbar-item" href="#"><i class="fas fa-file-contract"></i> About Us</a></li>
+				<li><a class="navbar-item" href="#"><i class="fas fa-box-open"></i> Our Products</a></li>
+				<li><a class="navbar-item" href="#"><i class="far fa-address-card"></i> Contact Us</a></li>
 			</ul>
 		</nav>
-		<!--
-		<br>
-		<div class="text-center container">
-			<h1 class="banner-name"><b>PRERANA ENTERPRISES</b></h1>
+		<div class="container">
+			<h1 class="banner-title pt-5 text-white text-lg-center">
+				Corrugated Boxes Tailored to your Needs!
+			</h1>
+			<p class="banner-caption text-white text-lg-center pb-5 mb-0">We sell all types of corrugated boxes.</p>
 		</div>
-	-->
 
 	</div>
 
@@ -157,7 +201,7 @@
 	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
 	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
 
-<div class="pt-5"><h2 class="text-center subname pt-4 pb-md-5 pb-4" id="proud-client"><i class="fas fa-sitemap"></i> Our Proud Clients</h2></div>
+<h2 class="text-center subname pt-4 pb-md-5 pb-4" id="proud-client"><i class="fas fa-sitemap icon-color"></i> Our Proud Clients</h2>
 
 <div class="proud pb-4">
 	<div class="t1" id="t1">
@@ -191,6 +235,10 @@
 	<div class="container text-right mt-md-5 mt-4"><p class="text-justify home-happy">We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</p><a href="#" class="btn btn-primary review-btn">Read Reviews</a></div>
 
 </div>
+
+
+
+
 
 <h2 class="text-center subname pt-3 pb-md-4 pb-4"><i class="fas fa-crosshairs icon-color"></i> Our Primary Goals</h2>
 <div class="container home-goal pb-4 text-success">
@@ -324,7 +372,10 @@
 
 <script type="text/javascript">
 	
-	
+	$("nav ul li").hover(function() {
+		if(screen.width>740 && window.scrollY<50)
+		$("nav ul li a").css("color","#fff");
+	});
 
 
 
@@ -342,6 +393,9 @@
 	}
 
 	window.onscroll = function() {
+		navchange();
+
+
 		if(window.scrollY>50)
 		{
 			if(document.getElementById('click').style.marginRight != '100px')
@@ -363,6 +417,8 @@
 
 
 	window.onresize = function() {
+
+		navchange();
 
 		if(document.getElementById('check').checked)
 		{
