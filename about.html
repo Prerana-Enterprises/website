@@ -80,14 +80,13 @@
 
 		function page_height() {
 			setTimeout(function() {
+				document.getElementById('full-footer').style.marginTop = '0';
 				var doc_height = document.getElementsByTagName('body')[0].offsetHeight;
 				var view_height = window.innerHeight;
 				if(doc_height<view_height)
 				{
 					document.getElementById('full-footer').style.marginTop = (view_height - doc_height) + 'px';
 				}
-				else
-					document.getElementById('full-footer').style.marginTop = '0';
 			}, 30);
 		}
 
@@ -138,6 +137,7 @@
 
 
 
+<div class="pt-5"><h2 class="text-center subname pt-3 pb-md-4 pb-4"><i class="far fa-comment icon-color"></i> Contact Us</h2></div>
 
 
 

@@ -97,14 +97,13 @@
 
 		function page_height() {
 			setTimeout(function() {
+				document.getElementById('full-footer').style.marginTop = '0';
 				var doc_height = document.getElementsByTagName('body')[0].offsetHeight;
 				var view_height = window.innerHeight;
 				if(doc_height<view_height)
 				{
 					document.getElementById('full-footer').style.marginTop = (view_height - doc_height) + 'px';
 				}
-				else
-					document.getElementById('full-footer').style.marginTop = '0';
 			}, 30);
 		}
 
@@ -158,7 +157,7 @@
 	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
 	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
 
-<h2 class="text-center subname pt-5 pb-md-5 pb-4 mt-5" id="proud-client"><i class="fas fa-network-wired icon-color"></i> Our Proud Clients</h2>
+<div class="pt-5"><h2 class="text-center subname pt-4 pb-md-5 pb-4" id="proud-client"><i class="fas fa-sitemap"></i> Our Proud Clients</h2></div>
 
 <div class="proud pb-4">
 	<div class="t1" id="t1">
