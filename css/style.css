@@ -279,7 +279,7 @@ label #bars
 	margin-bottom: 2%;
 }
 
-@media(max-width: 417px)
+@media(max-width: 500px)
 {
 	.banner-title
 	{
@@ -295,7 +295,7 @@ label #bars
 	}
 }
 
-@media(max-height: 740px) and (max-width: 450px)
+@media(max-height: 740px) and (max-width: 500px)
 {
 	.banner-title
 	{
