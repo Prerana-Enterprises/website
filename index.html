@@ -80,6 +80,10 @@
 				{
 					document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
 				}
+				else
+				{
+					document.getElementsByClassName('banner')[0].style.minHeight = '0px';
+				}
 				if(screen.width>740)
 				{
 					let items = document.getElementsByClassName('navbar-item');
@@ -433,11 +437,11 @@
 
 <script type="text/javascript">
 
-	alert(screen.width);
-	alert(screen.height);
+	alert(window.innerWidth);
+	alert(window.innerHeight);
 
 
-	setTimeout(function() {if(screen.height<830){window.scroll(0,60)}}, 3000);
+	setTimeout(function() {if(screen.height<830 && window.scrollY<50){window.scroll(0,60)}}, 3000);
 
 	if(window.scrollY>50)
 	{
@@ -460,6 +464,10 @@
 		{
 			document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
 		}
+		else
+		{
+			document.getElementsByClassName('banner')[0].style.minHeight = '0px';
+		}
 		document.getElementById('nav').style.height = '60px';
 		$("nav ul li").css("line-height","60px");
 		$("nav a img").css("height","50px");
@@ -470,6 +478,10 @@
 		if(screen.height<830)
 		{
 			document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
+		}
+		else
+		{
+			document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 		}
 		document.getElementById('nav').style.height = '70px';
 		$("nav a img").css("top","10px");
