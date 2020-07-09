@@ -227,7 +227,7 @@
 			var opacity = document.getElementsByClassName('boom-opacity');
 			for(var i=0;i<opacity.length;i++)
 			{
-				if(window.scrollY+((9*window.innerHeight)/10)>opacity[i].offsetTop)
+				if(window.scrollY+((9.5*window.innerHeight)/10)>opacity[i].offsetTop)
 				{
 					opacity[i].style.opacity = '1';
 				}
@@ -481,7 +481,7 @@
 <script type="text/javascript">
 
 
-	setTimeout(function() {if(screen.height<830 && window.scrollY<50){window.scroll(0,60)}}, 5000);
+	setTimeout(function() {if(screen.height<830 && window.scrollY<50){window.scroll(0,60)}}, 3500);
 
 	if(window.scrollY>50)
 	{
