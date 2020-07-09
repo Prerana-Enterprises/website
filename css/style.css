@@ -311,6 +311,27 @@ label #bars
 	}
 }
 
+@media(max-height: 720px) and (max-width: 600px)
+{
+	#banner
+	{
+		padding-top: 70px;
+	}
+
+	.banner-title
+	{
+		font-size: 45px;
+		line-height: 50px;
+		margin-bottom: 25px;
+	}
+
+	.banner-caption
+	{
+		font-size: 20px;
+		line-height: 35px;
+	}
+}
+
 @media(max-height: 670px) and (max-width: 600px)
 {
 	#banner
@@ -332,7 +353,7 @@ label #bars
 	}
 }
 
-@media(max-height: 640px) and (max-width: 600px)
+@media(max-height: 660px) and (max-width: 600px)
 {
 	#banner
 	{
