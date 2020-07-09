@@ -295,7 +295,7 @@ label #bars
 	}
 }
 
-@media(max-height: 740px) and (max-width: 500px)
+@media(max-height: 760px) and (max-width: 600px)
 {
 	.banner-title
 	{
