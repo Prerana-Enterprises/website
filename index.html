@@ -114,28 +114,59 @@
 			}
 		}
 
-
 		function dyheight() {
 
 
 			let plist = document.getElementsByClassName('img-client-home');
-			max = plist[0].clientHeight;
+			let hlist = document.getElementsByClassName('image-move');
+			
 			harray = [];
-			harray.push(plist[0].clientHeight);
+			if(hlist[0].style.display != 'none')
+			{
+				harray.push(plist[0].clientHeight);
+				max = plist[0].clientHeight;
+			}
+			else
+			{
+				hlist[0].style.opacity = '0';
+				hlist[0].style.transition = '0s';
+				hlist[0].style.left = ((plist.length-1)*25)+'%';
+				hlist[0].style.display = 'initial';
+				harray.push(plist[0].clientHeight);
+				max = plist[0].clientHeight;
+				hlist[0].style.opacity = '1';
+				hlist[0].style.transition = '1s';
+			}
 			for(var i=1; i<plist.length; i++)
 			{
-				if(plist[i].clientHeight>max)
+				if(hlist[i].style.display != 'none')
 				{
-					max=plist[i].clientHeight;
+					if(plist[i].clientHeight>max)
+					{
+						max=plist[i].clientHeight;
+					}
+					harray.push(plist[i].clientHeight);
 				}
-				harray.push(plist[i].clientHeight);
+				else
+				{
+					hlist[i].style.opacity = '0';
+					hlist[i].style.transition = '0s';
+					hlist[i].style.left = ((plist.length-1)*25)+'%';
+					hlist[i].style.display = 'initial';
+					if(plist[i].clientHeight>max)
+					{
+						max=plist[i].clientHeight;
+					}
+					harray.push(plist[i].clientHeight);
+					hlist[i].style.opacity = '1';
+					hlist[i].style.transition = '1s';
+				}
 			}
 			for(var i=0; i<plist.length; i++)
 			{
-				plist[i].style.marginTop = '-'+(harray[i]/2)+'px';
-				plist[i].style.top = (max/2)+'px';
+				plist[i].style.top = ((max/2)-(harray[i]/2))+'px';
 			}
-			document.getElementById('img-strip').style.height = max+'px';
+			document.getElementById('img-strip').style.height = (max+1)+'px';
 
 
 			document.getElementById('photo-stack').style.height = (document.getElementById('stack-pics').clientHeight + 10)+'px';
@@ -190,6 +221,18 @@
 				document.getElementById('bait').style.marginRight = '0px';
 			}
 		}
+
+		function boom()
+		{
+			var opacity = document.getElementsByClassName('boom-opacity');
+			for(var i=0;i<opacity.length;i++)
+			{
+				if(window.scrollY+((9*window.innerHeight)/10)>opacity[i].offsetTop)
+				{
+					opacity[i].style.opacity = '1';
+				}
+			}
+		}
 	</script>
 
 </head>
@@ -241,7 +284,7 @@
 		<div class="client-strip py-4">
 		
 			<div class="img-strip" id="img-strip">
-				<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+				<div class="image-move"><img src="images/longlogo.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
 				<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
 				<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
 				<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
@@ -303,53 +346,53 @@
 
 
 <div class="home-goals">
-	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white">Our Primary Goals</h2>
+	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white boom-opacity">Our Primary Goals</h2>
 	<div class="container home-goal pb-4">
 		<div class="row">
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
 					<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
 					<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
 				</div>
 			</div>
 
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
 					<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
 					<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
 					<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
 					<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-comments"></i></div>
 					<div class="col-11 text-justify">Encourage communication to achieve the highest standard of performance.</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-12">
+			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="far fa-question-circle"></i></div>
 					<div class="col-11 text-justify">Resolve all queries of customers.</div>
@@ -360,7 +403,7 @@
 </div>
 
 <div class="aboutus-bg">
-	<h2 class="text-center subname pt-3 pb-md-5 pb-4">More About Us</h2>
+	<h2 class="text-center subname pt-3 pb-md-5 pb-4 boom-opacity">More About Us</h2>
 
 	<div class="row home-product text-center pb-5">
 		<div class="col-md-5 col-12">
@@ -374,7 +417,7 @@
 		</div>
 		<div class="col-md-7 col-12">
 			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2">
-				<p>Prerana Enterprises is an extremely innovative company that is always open to fresh ideas. We are always looking at new ways to improve our operations and the process.</p><p class="mb-2">We understand the challenges faced by our clients and assist them in developing the ideas that would work efficiently for their unique needs and would fit in with their budget.</p>
+				<p class="boom-opacity">Prerana Enterprises is an extremely innovative company that is always open to fresh ideas. We are always looking at new ways to improve our operations and the process.</p><p class="mb-2 boom-opacity">We understand the challenges faced by our clients and assist them in developing the ideas that would work efficiently for their unique needs and would fit in with their budget.</p>
 				<div class="mr-sm-5 text-right mt-0"><a href="#" class="py-1 btn btn-dark home-profile-info">More About Us!</a></div>
 			</div>
 		</div>
@@ -509,6 +552,8 @@
 
 	window.onscroll = function() {
 		navchange();
+
+		boom();
 
 
 		if(window.scrollY>50)

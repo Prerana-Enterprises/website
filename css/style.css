@@ -968,3 +968,9 @@ label #bars
 		width: 100%;
 	}
 }
+
+.boom-opacity
+{
+	opacity: 0;
+	transition: 0.7s;
+}
