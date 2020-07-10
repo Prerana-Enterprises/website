@@ -813,6 +813,11 @@ label #bars
 	border-bottom-right-radius: 10px;
 }
 
+#credit-box-contact
+{
+	background: #fff;
+}
+
 .credit
 {
 	font-size: 10px;
@@ -832,6 +837,17 @@ label #bars
 	{
 		font-size: 8px;
 	}
+}
+
+#credit-contact
+{
+	color: #000;
+	opacity: 0.25;
+}
+
+#credit-contact:hover
+{
+	opacity: 0.55;
 }
 
 .copyright

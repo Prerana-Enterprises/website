@@ -53,12 +53,6 @@
 
 
 	<script type="text/javascript">
-		function dyheight() {
-			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
-			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
-			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
-			page_height();
-		}
 
 
 		function black(){
@@ -250,53 +244,8 @@
 
 
 <footer class="footer" id="full-footer">
-	<div class="main-footer  pt-3">
-		<div class="container">
-			<div class="row">
-
-
-				<div class="col-lg-4 col-sm-6 col-12">
-					<div class="ml-sm-3 ml-0 text-sm-left text-center mb-3 footer-head"><b>Contact Details</b></div>
-					<div class="row footer-data">
-						<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
-						<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
-					</div>
-					<div class="row footer-data">
-						<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
-						<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
-					</div>
-					<div class="row footer-data">
-						<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
-						<div class="col-sm-10 col-9 mb-3">email.email.com</div>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4">
-					<div class="ml-sm-3 ml-0 mb-3 footer-head text-sm-left text-center"><b>Reach Out To Us</b></div>
-					<div class="row footer-data">
-						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
-						<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
-					</div>
-					<div class="text-center text-lg-left pb-2">
-						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i> Location</a>
-						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i> Call Us</a>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
-					<div class="w-75 mx-auto" id="footer-image-div">
-						<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</div>
-	<div class="credit-box py-0 my-0"><div class="text-right credit container py-0 my-0">Website by Abhishek Joshi<br>+919757468857</div></div>
+	
+	<div class="credit-box py-0 my-0" id="credit-box-contact"><div class="text-right credit container py-0 my-0" id="credit-contact">Website by Abhishek Joshi<br>+919757468857</div></div>
 
 	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
 </footer>
@@ -386,9 +335,6 @@
 		}
 
 
-		setTimeout(function() {
-			dyheight();
-		}, 350);
 	}
 
 
