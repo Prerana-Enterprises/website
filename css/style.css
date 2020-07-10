@@ -985,6 +985,13 @@ label #bars
 	display: none;
 }
 
+.uni-contact-text
+{
+	display: none;
+	font-size: 20px;
+	vertical-align: top;
+}
+
 @media(max-width: 860px)
 {
 	.uni-contact-btn
@@ -1051,14 +1058,6 @@ label #bars
 {
 	opacity: 0;
 	transition: 0.4s;
-}
-
-.uni-contact-text
-{
-	display: none;
-	font-size: 20px;
-	line-height: 60px;
-	vertical-align: top;
 }
 
 .uni-contact-btn:hover .uni-contact-text
