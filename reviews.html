@@ -93,18 +93,7 @@
 			}, 30);
 		}
 
-		function slidein() {
-			if(document.getElementById('bait').style.marginRight == '0px')
-			{
-				document.getElementById('click').style.marginRight = '100px';
-				document.getElementById('bait').style.marginRight = '100px';
-			}
-			else
-			{
-				document.getElementById('click').style.marginRight = '0px';
-				document.getElementById('bait').style.marginRight = '0px';
-			}
-		}
+
 
 		function navchange() {
 			if(window.scrollY>2)
@@ -191,9 +180,6 @@
 
 
 
-
-	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
-	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
 
 
 
@@ -325,19 +311,7 @@
 		navchange();
 
 
-		if(window.scrollY>50)
-		{
-			if(document.getElementById('click').style.marginRight != '100px')
-			{
-				document.getElementById('click').style.marginRight = '0px';
-				document.getElementById('bait').style.marginRight = '0px';
-			}
-		}
-		else
-		{
-			document.getElementById('click').style.marginRight = '-50px';
-			document.getElementById('bait').style.marginRight = '-50px';
-		}
+
 	}
 
 	
