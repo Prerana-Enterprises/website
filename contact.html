@@ -115,7 +115,7 @@
 			{
 				document.getElementById('nav').style.background = 'transparent';
 				document.getElementById('nav').style.borderBottom = 'none';
-				if(screen.width>740)
+				if(window.innerWidth>740)
 				{
 					let items = document.getElementsByClassName('navbar-item');
 					let i=0;
@@ -321,7 +321,7 @@
 		$("nav a img").css("height","50px");
 		$("nav a img").css("top","5px");
 	}
-	else if(screen.width<740)
+	else if(window.innerWidth<740)
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
@@ -338,7 +338,7 @@
 	}
 	
 	$("nav ul li").hover(function() {
-		if(screen.width>740 && window.scrollY<2)
+		if(window.innerWidth>740 && window.scrollY<2)
 		{
 			$("nav ul li a").css("color","#fff");
 		}

@@ -86,7 +86,7 @@
 				{
 					document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 				}
-				if(screen.width>740)
+				if(window.innerWidth>740)
 				{
 					let items = document.getElementsByClassName('navbar-item');
 					let i=0;
@@ -501,7 +501,7 @@
 		$("nav a img").css("height","50px");
 		$("nav a img").css("top","5px");
 	}
-	else if(screen.width<740)
+	else if(window.innerWidth<740)
 	{
 		if(screen.height<830)
 		{
@@ -532,7 +532,7 @@
 	}
 	
 	$("nav ul li").hover(function() {
-		if(screen.width>740 && window.scrollY<50)
+		if(window.innerWidth>740 && window.scrollY<50)
 		{
 			$("nav ul li a").css("color","#fff");
 		}
