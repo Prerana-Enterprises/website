@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prerana Enterprises | Client Reviews</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Abhishek Joshi">
+
+
+	<!--whatsapp and fb-->
+	<meta property="og:title" content="Prerana Enterprises | Client Reviews" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="" />
+	<meta property="og:image:height" content="" />
+	<meta property="og:image:alt" content="" />
+
+	<!--twitter-->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content="Prerana Enterprises | Client Reviews" />
+	<meta property="twitter:description" content="" />
+	<meta property="twitter:image" content="" />
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="">
+
+	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-add-css="false"></script>
+	<link href="https://use.fontawesome.com/releases/v5.13.0/css/svg-with-js.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="images/favicon.png" type="image/png">
+
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+
+	<script type="text/javascript">
+		function dyheight() {
+			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
+			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
+			page_height();
+		}
+
+
+		function black(){
+			if(document.getElementById('check').checked)
+			{
+				document.getElementById('nav').style.background = '#fff';
+				document.getElementById('bars').style.color = "#000";
+				setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
+				document.getElementById('bars').style.transform = 'rotate(-90deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(-270deg)';}, 100);
+			}
+			else
+			{
+				navchange();
+				document.getElementById('notnav').classList.toggle('nodisplay');
+				document.getElementById('bars').style.transform = 'rotate(-180deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(0deg)';}, 100);
+			}
+		}
+
+		function page_height() {
+			setTimeout(function() {
+				document.getElementById('full-footer').style.marginTop = '0';
+				var doc_height = document.getElementsByTagName('body')[0].offsetHeight;
+				var view_height = window.innerHeight;
+				if(doc_height<view_height)
+				{
+					document.getElementById('full-footer').style.marginTop = (view_height - doc_height) + 'px';
+				}
+			}, 30);
+		}
+
+		function slidein() {
+			if(document.getElementById('bait').style.marginRight == '0px')
+			{
+				document.getElementById('click').style.marginRight = '100px';
+				document.getElementById('bait').style.marginRight = '100px';
+			}
+			else
+			{
+				document.getElementById('click').style.marginRight = '0px';
+				document.getElementById('bait').style.marginRight = '0px';
+			}
+		}
+
+		function navchange() {
+			if(window.scrollY>2)
+			{
+				document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+				document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+				let items = document.getElementsByClassName('navbar-item');
+				let i=0;
+				for(i=0;i<items.length;i++)
+				{
+					items[i].style.color = '#393185';
+				}
+				document.getElementById('bars').style.color = "#000";
+				document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+				document.getElementById('nav').style.height = '60px';
+				$("nav ul li").css("line-height","60px");
+				$("nav a img").css("height","50px");
+				$("nav a img").css("top","5px");
+			}
+			else
+			{
+				document.getElementById('nav').style.background = 'transparent';
+				document.getElementById('nav').style.borderBottom = 'none';
+				if(window.innerWidth>740)
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = 'rgba(255,255,255,1)';
+					}
+					document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
+					document.getElementById('nav').style.height = '70px';
+					$("nav ul li").css("line-height","70px");
+					$("nav a img").css("height","55px");
+					$("nav a img").css("top","10px");
+				}
+				else
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = '#393185';
+					}
+					document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+					document.getElementById('nav').style.height = '60px';
+					$("nav ul li").css("line-height","60px");
+					$("nav a img").css("height","50px");
+					$("nav a img").css("top","5px");
+				}
+				document.getElementById('bars').style.color = "#fff";
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+	<div class="banner">
+
+		<nav id="nav">
+			<input type="checkbox" id="check" onchange="black();">
+			<label for="check">
+				<i class="fas fa-bars" id="bars"></i>
+			</label>
+			<a href="index.html"><img src="images/logo.png" alt="Prerana Enterprises"></a>
+			<ul>
+				<li><a class="navbar-item" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+				<li><a class="navbar-item" href="about.html"><i class="fas fa-file-contract"></i> About Us</a></li>
+				<li><a class="navbar-item" href="products.html"><i class="fas fa-box-open"></i> Our Products</a></li>
+				<li><a class="navbar-item" href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<h2 class=" subname pt-2 pb-2 text-white">Client Reviews</h2>
+		</div>
+
+	</div>
+
+
+<div id="notnav" class="nodisplay"></div>
+
+
+
+
+	<div class="click text-center" onclick="slidein();" id="click">Contact Us</div>
+	<div class="bait" id="bait">Lorem<br>lorem<br>lorem<br>lorem</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer" id="full-footer">
+	<div class="main-footer  pt-3">
+		<div class="container">
+			<div class="row">
+
+
+				<div class="col-lg-4 col-sm-6 col-12">
+					<div class="ml-sm-3 ml-0 text-sm-left text-center mb-3 footer-head"><b>Contact Details</b></div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
+						<div class="col-sm-10 col-9 mb-3">Anand Karmarkar<br>Shubham Karmarkar</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
+						<div class="col-sm-10 col-9 mb-3">9999999999<br>9999999999</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
+						<div class="col-sm-10 col-9 mb-3">email.email.com</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4">
+					<div class="ml-sm-3 ml-0 mb-3 footer-head text-sm-left text-center"><b>Reach Out To Us</b></div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
+						<div class="col-sm-10 col-9 mb-3">Address.....<br>Address..... <br>Address.....<br>Address..... </div>
+					</div>
+					<div class="text-center text-lg-left pb-2">
+						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i> Location</a>
+						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i> Call Us</a>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
+					<div class="w-75 mx-auto" id="footer-image-div">
+						<img src="images/logo.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="credit-box py-0 my-0"><div class="text-right credit container py-0 my-0">Website by Abhishek Joshi<br>+919757468857</div></div>
+
+	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
+</footer>
+
+
+<script type="text/javascript">
+	
+	if(window.scrollY>2)
+	{
+		document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+		document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+		let items = document.getElementsByClassName('navbar-item');
+		let i=0;
+		for(i=0;i<items.length;i++)
+		{
+			items[i].style.color = '#393185';
+		}
+		document.getElementById('bars').style.color = "#000";
+		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+		document.getElementById('nav').style.height = '60px';
+		$("nav ul li").css("line-height","60px");
+		$("nav a img").css("height","50px");
+		$("nav a img").css("top","5px");
+	}
+	else if(window.innerWidth<740)
+	{
+		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+		document.getElementById('nav').style.height = '60px';
+		$("nav ul li").css("line-height","60px");
+		$("nav a img").css("height","50px");
+		$("nav a img").css("top","5px");
+	}
+	else
+	{
+		document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
+		document.getElementById('nav').style.height = '70px';
+		$("nav a img").css("top","10px");
+		$("nav a img").css("height","55px");
+	}
+	
+	$("nav ul li").hover(function() {
+		if(window.innerWidth>740 && window.scrollY<2)
+		{
+			$("nav ul li a").css("color","#fff");
+		}
+	});
+
+
+
+	document.getElementById('notnav').onclick = function() {
+		document.getElementById('check').checked=false;
+		black();
+	}
+
+	document.getElementById('active').onclick = function() {
+		if(window.innerWidth<=740)
+		{
+			document.getElementById('check').checked=false;
+			black();
+		}
+	}
+
+	window.onscroll = function() {
+
+		navchange();
+
+
+		if(window.scrollY>50)
+		{
+			if(document.getElementById('click').style.marginRight != '100px')
+			{
+				document.getElementById('click').style.marginRight = '0px';
+				document.getElementById('bait').style.marginRight = '0px';
+			}
+		}
+		else
+		{
+			document.getElementById('click').style.marginRight = '-50px';
+			document.getElementById('bait').style.marginRight = '-50px';
+		}
+	}
+
+	
+
+
+
+
+	window.onresize = function() {
+
+		if(document.getElementById('check').checked)
+		{
+			if(window.innerWidth<=740)
+			{
+				document.getElementById('notnav').classList.remove('nodisplay');
+			}
+			else
+			{
+				document.getElementById('notnav').classList.add('nodisplay');
+			}
+		}
+
+
+		setTimeout(function() {
+			dyheight();
+		}, 350);
+	}
+
+
+	window.onload = function() {
+		page_height();
+		boom();
+		setTimeout(function() {page_height();}, 2200);
+	};
+
+		
+	
+</script>
+
+</body>
+</html>
