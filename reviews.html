@@ -148,6 +148,24 @@
 				document.getElementById('bars').style.color = "#fff";
 			}
 		}
+
+		function contact_vis()
+		{
+			var btn = document.getElementById('uni-contact-btn');
+			var icon = document.getElementById('uni-contact-icon');
+				if(window.scrollY>50 && (window.scrollY + window.innerHeight - 50)<document.getElementById('full-footer').offsetTop)
+				{
+					btn.style.display = 'block';
+					icon.style.opacity = '1';
+				}
+				else
+				{
+					icon.style.opacity = '0';
+					setTimeout(function() {
+						btn.style.display = 'none';
+					}, 450);
+				}
+		}
 	</script>
 
 </head>
@@ -180,7 +198,7 @@
 
 
 
-
+<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
 
 
 
@@ -298,19 +316,13 @@
 		black();
 	}
 
-	document.getElementById('active').onclick = function() {
-		if(window.innerWidth<=740)
-		{
-			document.getElementById('check').checked=false;
-			black();
-		}
-	}
+
 
 	window.onscroll = function() {
 
 		navchange();
 
-
+		contact_vis();
 
 	}
 
@@ -337,6 +349,8 @@
 		setTimeout(function() {
 			dyheight();
 		}, 350);
+
+		contact_vis();
 	}
 
 

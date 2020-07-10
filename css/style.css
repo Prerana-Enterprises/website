@@ -30,6 +30,8 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 2s;
+	border-bottom-right-radius: 10%;
+	border-bottom-left-radius: 10%;
 }
 
 #banner
@@ -39,6 +41,8 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 2s;
+	border-bottom-right-radius: 0%;
+	border-bottom-left-radius: 0%;
 }
 
 nav
@@ -410,37 +414,6 @@ label #bars
 	display: none;
 }
 
-.click
-{
-	transform: rotate(-90deg);
-	position: fixed;
-	bottom: 250px;
-	width: 100px;
-	right: -35px;
-	transition: .5s;
-	margin-right: -50px;
-	background: #e85022;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	color: #fff;
-	cursor: pointer;
-	z-index: 199;
-}
-
-.bait
-{
-	position: fixed;
-	bottom: 212px;
-	right: -55px;
-	transition: .5s;
-	height: 100px;
-	line-height: 25px;
-	padding-left: 15px;
-	margin-right: -50px;
-	background: #e85022;
-	z-index: 199;
-}
-
 .subname
 {
 	font-size: 50px;
@@ -598,6 +571,7 @@ label #bars
   margin: auto;
   width: 350px;
   height: 300px;
+  transition: 1s;
 }
 .photo-stack img {
   position: absolute;
@@ -989,4 +963,105 @@ label #bars
 {
 	opacity: 0;
 	transition: 0.7s;
+}
+
+.uni-contact-btn
+{
+	width: 60px;
+	height: 60px;
+	background: #f52c33;
+	z-index: 400;
+	bottom: 80px;
+	right: 120px;
+	line-height: 60px;
+	color: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 40px;
+	padding: 0 10px 0 10px;
+	animation-name: boing;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	display: none;
+}
+
+@media(max-width: 860px)
+{
+	.uni-contact-btn
+	{
+		right: 90px;
+		bottom: 60px;
+	}
+}
+
+@media(max-width: 771px)
+{
+	.uni-contact-btn
+	{
+		right: 70px;
+		bottom: 40px;
+		font-size: 30px;
+		line-height: 50px;
+		width: 50px;
+		height: 50px;
+	}
+
+	.uni-contact-text
+	{
+		font-size: 18px;
+	}
+}
+
+@media(max-width: 500px)
+{
+	.uni-contact-btn
+	{
+		right: 40px;
+		bottom: 30px;
+	}
+}
+
+@media(max-width: 400px)
+{
+	.uni-contact-btn
+	{
+		right: 30px;
+		bottom: 25px;
+	}
+}
+
+@keyframes boing
+{
+	0%{transform: scale(1);}
+	1%{transform: scale(1.17);}
+	2%{transform: scale(0.8);}
+	3%{transform: scale(1);}
+	100%{transform: scale(1);}
+}
+
+.uni-contact-btn:hover
+{
+	border-radius: 50px;
+	width: auto;
+	border: 1px solid rgba(0,0,0,0.6);
+	animation-play-state: paused;
+}
+
+.uni-contact-icon
+{
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.uni-contact-text
+{
+	display: none;
+	font-size: 20px;
+	line-height: 60px;
+	vertical-align: top;
+}
+
+.uni-contact-btn:hover .uni-contact-text
+{
+	display: inline-block;
 }

@@ -224,6 +224,24 @@
 				}
 			}
 		}
+
+		function contact_vis()
+		{
+			var btn = document.getElementById('uni-contact-btn');
+			var icon = document.getElementById('uni-contact-icon');
+				if(window.scrollY>50 && (window.scrollY + window.innerHeight - 50)<document.getElementById('full-footer').offsetTop)
+				{
+					btn.style.display = 'block';
+					icon.style.opacity = '1';
+				}
+				else
+				{
+					icon.style.opacity = '0';
+					setTimeout(function() {
+						btn.style.display = 'none';
+					}, 450);
+				}
+		}
 	</script>
 
 </head>
@@ -260,6 +278,96 @@
 
 <div id="notnav" class="nodisplay"></div>
 
+
+
+
+<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
+
+
+
+
+<div class="aboutus-bg">
+	<h2 class="text-center subname pt-3 pb-md-5 pb-4 boom-opacity proud-client">More About Us</h2>
+
+	<div class="row home-product text-center pb-5">
+		<div class="col-md-5 col-12">
+			<div class='photo-stack' id="photo-stack">
+			  <img src='http://placekitten.com/300/200' class="stack-pics" id="stack-pics" onload="dyheight();">
+			  <img src='http://placekitten.com/300/200?image=2' class="stack-pics" id="stack-pics">
+			  <img src='http://placekitten.com/300/200?image=3' class="stack-pics">
+			  <img src='http://placekitten.com/300/200?image=4' class="stack-pics">
+			  <img src='http://placekitten.com/300/200?image=5' class="stack-pics">
+			</div>
+		</div>
+		<div class="col-md-7 col-12">
+			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2">
+				<p class="boom-opacity">Prerana Enterprises is an extremely innovative company that is always open to fresh ideas. We are always looking at new ways to improve our operations and the process.</p><p class="mb-2 boom-opacity">We understand the challenges faced by our clients and assist them in developing the ideas that would work efficiently for their unique needs and would fit in with their budget.</p>
+				<div class="mr-sm-5 text-right mt-0"><a href="about.html" class="py-1 btn btn-dark home-profile-info">More About Us!</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="home-goals">
+	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white boom-opacity">Our Primary Goals</h2>
+	<div class="container home-goal pb-4">
+		<div class="row">
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
+					<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
+					<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
+					<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
+					<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
+					<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
+					<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-comments"></i></div>
+					<div class="col-11 text-justify">Encourage communication to achieve the highest standard of performance.</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-12 boom-opacity">
+				<div class="row">
+					<div class="col-1 text-right mx-0 px-0"><i class="far fa-question-circle"></i></div>
+					<div class="col-11 text-justify">Resolve all queries of customers.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -334,84 +442,6 @@
 
 
 
-<div class="home-goals">
-	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white boom-opacity">Our Primary Goals</h2>
-	<div class="container home-goal pb-4">
-		<div class="row">
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
-					<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
-					<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
-					<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
-					<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
-					<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
-					<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-comments"></i></div>
-					<div class="col-11 text-justify">Encourage communication to achieve the highest standard of performance.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="far fa-question-circle"></i></div>
-					<div class="col-11 text-justify">Resolve all queries of customers.</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="aboutus-bg">
-	<h2 class="text-center subname pt-3 pb-md-5 pb-4 boom-opacity proud-client">More About Us</h2>
-
-	<div class="row home-product text-center pb-5">
-		<div class="col-md-5 col-12">
-			<div class='photo-stack' id="photo-stack">
-			  <img src='http://placekitten.com/300/200' class="stack-pics" id="stack-pics" onload="dyheight();">
-			  <img src='http://placekitten.com/300/200?image=2' class="stack-pics" id="stack-pics">
-			  <img src='http://placekitten.com/300/200?image=3' class="stack-pics">
-			  <img src='http://placekitten.com/300/200?image=4' class="stack-pics">
-			  <img src='http://placekitten.com/300/200?image=5' class="stack-pics">
-			</div>
-		</div>
-		<div class="col-md-7 col-12">
-			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2">
-				<p class="boom-opacity">Prerana Enterprises is an extremely innovative company that is always open to fresh ideas. We are always looking at new ways to improve our operations and the process.</p><p class="mb-2 boom-opacity">We understand the challenges faced by our clients and assist them in developing the ideas that would work efficiently for their unique needs and would fit in with their budget.</p>
-				<div class="mr-sm-5 text-right mt-0"><a href="about.html" class="py-1 btn btn-dark home-profile-info">More About Us!</a></div>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 <footer class="footer" id="full-footer">
@@ -545,7 +575,7 @@
 
 		boom();
 
-
+		contact_vis();
 
 	}
 
@@ -574,6 +604,8 @@
 		setTimeout(function() {
 			dyheight();
 		}, 1100);
+
+		contact_vis();
 	}
 
 	setInterval(function() {
