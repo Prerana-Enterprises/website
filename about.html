@@ -166,6 +166,56 @@
 					}, 450);
 				}
 		}
+
+		function slidein()
+		{
+			document.getElementById('uni-contact-btn').style.transition = '0.5s';
+			document.getElementById('uni-contact-btn').style.bottom = '-100px';
+			var fs = $("#pop-subname").css("fontSize");
+			document.getElementById('close-pop').style.lineHeight = fs;
+			if(window.innerHeight>849)
+			{
+				document.getElementById('contact-pop').style.bottom = '120px';
+			}
+			else if(window.innerHeight>749)
+			{
+				document.getElementById('contact-pop').style.bottom = '80px';
+			}
+			else
+			{
+				document.getElementById('contact-pop').style.bottom = '20px';
+			}
+			var pop_ht = $("#contact-pop").css("height");
+			document.getElementById('thank-pop').style.height = (parseInt(pop_ht, 10)-9)+'px';
+		}
+
+		function slideout()
+		{
+			document.getElementById('contact-pop').style.bottom = '-1000px';
+			if(window.innerWidth<=400)
+			{
+				document.getElementById('uni-contact-btn').style.bottom = '25px';
+			}
+			else if(window.innerWidth<=500)
+			{
+				document.getElementById('uni-contact-btn').style.bottom = '30px';
+			}
+			else if(window.innerWidth<=771)
+			{
+				document.getElementById('uni-contact-btn').style.bottom = '40px';
+			}
+			else if(window.innerWidth<=860)
+			{
+				document.getElementById('uni-contact-btn').style.bottom = '60px';
+			}
+			else
+			{
+				document.getElementById('uni-contact-btn').style.bottom = '80px';
+			}
+			setTimeout(function() {
+				document.getElementById('uni-contact-btn').style.transition = '0s';
+			}, 550);
+		}
 	</script>
 
 </head>
@@ -198,10 +248,41 @@
 
 
 
-<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
+<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn" onclick="slidein();"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
+
+<div class="position-fixed contact-pop" id="contact-pop">
+	
+	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Thank You</h2><h2 class="text-center pt-md-1 pt-0">for contacting us!</h2><h2 class="text-center pt-md-3 pt-0">We will get back to you on your given contact details!</h2><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2></div>
+
+	<div class="row">
+		<h2 class=" subname pt-2 pb-2 proud-client col-10" id="pop-subname">Contact Us</h2>
+		<h2 class=" subname pt-2 pb-2 proud-client col-2 text-center close-pop text-danger" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
+	</div>
+	
+	<form class="ev_form mt-0 mb-3" autocomplete="off" id="pop-form">
+        <div class="form-group mb-1">
+            <div class="form-required-show">
+                <span class="form-required">* is for required.</span>
+            </div>
+            <label for="name">Name<span class="form-required"> *</span></label>
+            <input type="text" id="name" class="mb-2 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
+            <label for="number">Mobile Number<span class="form-required"> *</span></label>
+            <input type="tel" id="number" class="mb-2 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
+        	</br>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="mb-2 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
+            </br>
+            <label for="message">Message</label><br>
+            <textarea id="message" class="mb-2 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
+            <br>
 
 
+            <button class="btn btn-danger py-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
 
+
+        </div>
+    </form>
+</div>
 
 
 
