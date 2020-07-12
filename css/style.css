@@ -1194,3 +1194,8 @@ label #bars
 {
 	font-size: 90px;
 }
+
+.footer-address
+{
+	line-height: 1.8;
+}
