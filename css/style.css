@@ -555,10 +555,21 @@ label #bars
 
 .home-goals
 {
-	background: url(../images/snowfall.jpg);
+	background: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)), url(../images/recycle.jpg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+@media(max-width: 991px)
+{
+	.home-goals
+	{
+		background: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)), url(../images/open.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 .home-product
@@ -931,7 +942,19 @@ label #bars
 
 .aboutus-bg
 {
-	background: #f5dcdc;
+	background: linear-gradient(rgba(245,220,220,0.6),rgba(245,220,220,0.6)), url(../images/table.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media(max-width: 715px)
+{
+	.aboutus-bg
+	{
+		background: linear-gradient(rgba(245,220,220,0.6),rgba(245,220,220,0.6)), url(../images/tablemirror.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 .leftist
