@@ -59,6 +59,8 @@
 			if(document.getElementById('check').checked)
 			{
 				document.getElementById('nav').style.background = '#fff';
+				document.getElementById('logo-dark').style.opacity = '1';
+				document.getElementById('logo-light').style.opacity = '0';
 				document.getElementById('bars').style.color = "#000";
 				setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
 				document.getElementById('bars').style.transform = 'rotate(-90deg)';
@@ -91,6 +93,8 @@
 			if(window.scrollY>2)
 			{
 				document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+				document.getElementById('logo-dark').style.opacity = '1';
+				document.getElementById('logo-light').style.opacity = '0';
 				document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
 				let items = document.getElementsByClassName('navbar-item');
 				let i=0;
@@ -108,6 +112,8 @@
 			else
 			{
 				document.getElementById('nav').style.background = 'transparent';
+				document.getElementById('logo-light').style.opacity = '1';
+				document.getElementById('logo-dark').style.opacity = '0';
 				document.getElementById('nav').style.borderBottom = 'none';
 				if(window.innerWidth>740)
 				{
@@ -152,7 +158,8 @@
 			<label for="check">
 				<i class="fas fa-bars" id="bars"></i>
 			</label>
-			<a href="index.html"><img src="images/logo.png" alt="Prerana Enterprises"></a>
+			<a href="#"><img src="images/2.png" id="logo-light" alt="Prerana Enterprises"></a>
+			<a href="#"><img src="images/3.png" id="logo-dark" alt="Prerana Enterprises"></a>
 			<ul>
 				<li><a class="navbar-item" href="index.html"><i class="fas fa-home"></i> Home</a></li>
 				<li><a class="navbar-item" href="about.html"><i class="fas fa-file-contract"></i> About Us</a></li>
@@ -256,6 +263,8 @@
 	if(window.scrollY>2)
 	{
 		document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+		document.getElementById('logo-dark').style.opacity = '1';
+		document.getElementById('logo-light').style.opacity = '0';
 		document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
 		let items = document.getElementsByClassName('navbar-item');
 		let i=0;

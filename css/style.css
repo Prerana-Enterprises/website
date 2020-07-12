@@ -65,6 +65,11 @@ nav img
 	transition: 0.4s;
 }
 
+#logo-dark
+{
+	opacity: 0;
+}
+
 nav ul
 {
 	float: right;
@@ -1157,7 +1162,6 @@ label #bars
 {
 	width: 80%;
 	z-index: 400;
-	display: none;
 }
 
 @media(min-width: 450px)
