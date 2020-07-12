@@ -1199,3 +1199,15 @@ label #bars
 {
 	line-height: 1.8;
 }
+
+.home-goal2
+{
+	font-size: 30px;
+	color: rgba(255,255,255,0.8);
+	transition: 0.2s;
+}
+
+.home-goal-desc
+{
+	font-size: 20px;
+}

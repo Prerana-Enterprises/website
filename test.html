@@ -176,7 +176,14 @@
 
 
 			document.getElementById('photo-stack').style.height = (document.getElementById('stack-pics').clientHeight + 10)+'px';
-			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			if(window.innerWidth > 991 || window.innerWidth < 575)
+			{
+				document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			}
+			else
+			{
+				document.getElementById('footer-image').style.width = (window.innerWidth/3)+'px';
+			}
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
 			page_height();
@@ -412,61 +419,39 @@
 
 
 <div class="home-goals">
-	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white boom-opacity">Our Primary Goals</h2>
-	<div class="container home-goal pb-4">
+	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white">Our Primary Goals</h2>
+	<div class="container home-goal2 pb-4" id="home-goal2">
 		<div class="row">
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
-					<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
-					<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
-					<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
-					<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
-					<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
-					<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-comments"></i></div>
-					<div class="col-11 text-justify">Encourage communication to achieve the highest standard of performance.</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-12 boom-opacity">
-				<div class="row">
-					<div class="col-1 text-right mx-0 px-0"><i class="far fa-question-circle"></i></div>
-					<div class="col-11 text-justify">Resolve all queries of customers.</div>
-				</div>
+			<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
+			<div class="col-11 text-justify pb-2">
+				High-quality, reliable corrugated boxes<br>
+				<p class="home-goal-desc mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don't face any problems while using our products.</p>
 			</div>
 		</div>
+
+		
+			
 	</div>
 </div>
+
+<script type="text/javascript">
+
+	var line1 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-justify pb-2">Provide affordable solutions<br><p class="home-goal-desc mt-3">Get corrugated boxes at most competitive prices. Here we provide effective and affordable solutions to our clients to fulfill their needs.</p></div></div>';
+	var line2 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-justify pb-2">High-quality, reliable corrugated boxes<br><p class="home-goal-desc mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don\'t face any problems while using our products.</p></div></div>';
+	var us_array = [line1, line2];
+	var us_len = us_array.length;
+	var us_counter = 0;
+
+	setInterval(function() {
+		document.getElementById('home-goal2').style.transition = '0.4s';
+		document.getElementById('home-goal2').style.opacity = '0';
+		setTimeout(function() {
+			document.getElementById('home-goal2').innerHTML = us_array[us_counter%us_len];
+			document.getElementById('home-goal2').style.opacity = '1';
+			us_counter++;
+		}, 450);
+	}, 5000);
+</script>
 
 
 
@@ -572,15 +557,15 @@
 						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
 						<div class="col-sm-10 col-9 mb-3 footer-address">At Gavhe Post,<br>Dapoli, Ratnagiri,<br>Maharashtra-415712,<br>India.</div>
 					</div>
-					<div class="text-center text-lg-left pb-2">
-						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i> Location</a>
-						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i> Call Us</a>
+					<div class="text-center text-lg-left pb-2 pl-lg-5">
+						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i></a>
+						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
+						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i></a>
 					</div>
 				</div>
 
 
-				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
+				<div class="col-lg-4 col-12 pt-sm-0 py-2" id="footer-3">
 					<div class="w-75 mx-auto" id="footer-image-div">
 						<img src="images/2.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
 					</div>
