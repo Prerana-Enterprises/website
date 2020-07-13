@@ -162,7 +162,7 @@ label #bars
 	}
 }
 
-@media (max-width: 740px)
+@media (max-width: 870px)
 {
 	label #bars
 	{
@@ -262,6 +262,21 @@ label #bars
 	nav ul li a
 	{
 		font-size: 13px;
+	}
+}
+
+.banner-content
+{
+	margin-left: 12%;
+	margin-right: 10%;
+}
+
+@media(max-width: 944px)
+{
+	.banner-content
+	{
+		margin-left: 8%;
+		margin-right: 8%;
 	}
 }
 
@@ -398,6 +413,67 @@ label #bars
 		line-height: 32px;
 	}
 }
+
+.banner-btn
+{
+	width: 20%;
+	font-size: 18px;
+}
+
+@media(max-width: 991px)
+{
+	.banner-btn
+	{
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 767px)
+{
+	.banner-btn
+	{
+		font-size: 14px;
+		width: 30%;
+	}
+}
+
+@media(max-width: 457px)
+{
+	.banner-btn
+	{
+		font-size: 12px;
+	}
+}
+
+@media(max-width: 406px)
+{
+	.banner-btn
+	{
+		font-size: 12px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+@media(max-width: 351px)
+{
+	.banner-btn
+	{
+		font-size: 12px;
+		padding-right: 3px;
+		padding-left: 3px;
+	}
+}	
+
+@media(max-width: 335px)
+{
+	.banner-btn
+	{
+		font-size: 12px;
+		padding-right: 1px;
+		padding-left: 1px;
+	}
+}	
 
 #notnav
 {
@@ -963,15 +1039,7 @@ label #bars
 
 .width-changer
 {
-	width: 60%;
-}
-
-@media(max-width: 991px)
-{
-	.width-changer
-	{
-		width: 100%;
-	}
+	width: 100%;
 }
 
 .boom-opacity

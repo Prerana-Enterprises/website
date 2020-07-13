@@ -115,7 +115,7 @@
 				document.getElementById('logo-light').style.opacity = '1';
 				document.getElementById('logo-dark').style.opacity = '0';
 				document.getElementById('nav').style.borderBottom = 'none';
-				if(window.innerWidth>740)
+				if(window.innerWidth>870)
 				{
 					let items = document.getElementsByClassName('navbar-item');
 					let i=0;
@@ -279,7 +279,7 @@
 		$("nav a img").css("height","50px");
 		$("nav a img").css("top","5px");
 	}
-	else if(window.innerWidth<740)
+	else if(window.innerWidth<870)
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
@@ -296,7 +296,7 @@
 	}
 	
 	$("nav ul li").hover(function() {
-		if(window.innerWidth>740 && window.scrollY<2)
+		if(window.innerWidth>870 && window.scrollY<2)
 		{
 			$("nav ul li a").css("color","#fff");
 		}
@@ -310,7 +310,7 @@
 	}
 
 	document.getElementById('active').onclick = function() {
-		if(window.innerWidth<=740)
+		if(window.innerWidth<=870)
 		{
 			document.getElementById('check').checked=false;
 			black();
@@ -333,7 +333,7 @@
 
 		if(document.getElementById('check').checked)
 		{
-			if(window.innerWidth<=740)
+			if(window.innerWidth<=870)
 			{
 				document.getElementById('notnav').classList.remove('nodisplay');
 			}
