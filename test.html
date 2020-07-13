@@ -388,7 +388,7 @@
 
 
 <div class="aboutus-bg">
-	<h2 class="text-center subname pt-3 pb-md-5 pb-4 proud-client">More About Us</h2>
+	<h2 class="text-center subname pt-4 pb-md-5 pb-4 proud-client">More About Us</h2>
 
 	<div class="row home-product text-center pb-5">
 		<div class="col-md-5 col-12">
@@ -413,14 +413,14 @@
 
 
 
-<div class="home-goals">
-	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white">Our Primary Goals</h2>
+<div class="home-goals" id="home-primary-goals">
+	<h2 class="text-center subname pt-4 pb-4 text-white">Our Primary Goals</h2>
 	<div class="container home-goal2 pb-4" id="home-goal2">
 		<div class="row">
 			<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
-			<div class="col-11 text-justify pb-2">
+			<div class="col-11 text-left pb-2">
 				High-quality, reliable corrugated boxes<br>
-				<p class="home-goal-desc mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don't face any problems while using our products.</p>
+				<p class="home-goal-desc text-justify mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don't face any problems while using our products.</p>
 			</div>
 		</div>
 
@@ -431,8 +431,8 @@
 
 <script type="text/javascript">
 
-	var line1 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-justify pb-2">Provide affordable solutions<br><p class="home-goal-desc mt-3">Get corrugated boxes at most competitive prices. Here we provide effective and affordable solutions to our clients to fulfill their needs.</p></div></div>';
-	var line2 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-justify pb-2">High-quality, reliable corrugated boxes<br><p class="home-goal-desc mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don\'t face any problems while using our products.</p></div></div>';
+	var line1 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-left pb-2">Provide affordable solutions<br><p class="home-goal-desc text-justify mt-3">Get corrugated boxes at most competitive prices. Here we provide effective and affordable solutions to our clients to fulfill their needs.</p></div></div>';
+	var line2 = '<div class="row"><div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div><div class="col-11 text-left pb-2">High-quality, reliable corrugated boxes<br><p class="home-goal-desc text-justify mt-3">We have our prime focus on maintaining the best standards of boxes. We provide high quality corrugated boxes for the safety of your goods.<br>Our company pays a keen attention towards quality management so that our clients don\'t face any problems while using our products.</p></div></div>';
 	var us_array = [line1, line2];
 	var us_len = us_array.length;
 	var us_counter = 0;
@@ -524,7 +524,7 @@
 
 
 <footer class="footer" id="full-footer">
-	<div class="main-footer  pt-3">
+	<div class="main-footer  pt-5">
 		<div class="container">
 			<div class="row">
 
@@ -552,7 +552,7 @@
 						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
 						<div class="col-sm-10 col-9 mb-3 footer-address">At Gavhe Post,<br>Dapoli, Ratnagiri,<br>Maharashtra-415712,<br>India.</div>
 					</div>
-					<div class="text-center text-lg-left pb-2 pl-lg-5">
+					<div class="text-center text-md-left pb-2 pl-md-5">
 						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i></a>
 						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
 						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i></a>
@@ -688,6 +688,10 @@
 
 		contact_vis();
 		boom();
+
+		us_counter = us_len-1;
+		document.getElementById('home-goal2').innerHTML = us_array[us_counter%us_len];
+		document.getElementById('home-primary-goals').style.minHeight = document.getElementById('home-primary-goals').offsetHeight+'px';
 	}
 
 	setInterval(function() {
@@ -702,6 +706,11 @@
 		page_height();
 		boom();
 		setTimeout(function() {page_height();}, 2200);
+
+		us_counter = us_len-1;
+		document.getElementById('home-goal2').innerHTML = us_array[us_counter%us_len];
+		document.getElementById('home-primary-goals').style.minHeight = document.getElementById('home-primary-goals').offsetHeight+'px';
+		us_counter = 0;
 	};
 
 		

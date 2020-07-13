@@ -1279,3 +1279,55 @@ label #bars
 {
 	font-size: 20px;
 }
+
+@media(max-width: 780px)
+{
+	.home-goal2
+	{
+		font-size: 25px;
+	}
+
+	.home-goal-desc
+	{
+		font-size: 17px;
+	}
+}
+
+@media(max-width: 540px)
+{
+	.home-goal2
+	{
+		font-size: 22px;
+	}
+
+	.home-goal-desc
+	{
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 387px)
+{
+	.home-goal2
+	{
+		font-size: 20px;
+	}
+
+	.home-goal-desc
+	{
+		font-size: 14px;
+	}
+}
+
+@media(max-width: 365px)
+{
+	.home-goal2
+	{
+		font-size: 19px;
+	}
+
+	.home-goal-desc
+	{
+		font-size: 13px;
+	}
+}
