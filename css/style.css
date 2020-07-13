@@ -56,7 +56,7 @@ nav img
 	height: 50px;
 	position: absolute;
 	top: 5px;
-	left: 12%;
+	left: 8%;
 	transition: 0.4s;
 }
 
@@ -68,7 +68,7 @@ nav img
 nav ul
 {
 	float: right;
-	margin-right: 12%;
+	margin-right: 8%;
 	list-style: none;
 	margin-bottom: 0;
 }
@@ -267,17 +267,8 @@ label #bars
 
 .banner-content
 {
-	margin-left: 12%;
-	margin-right: 10%;
-}
-
-@media(max-width: 944px)
-{
-	.banner-content
-	{
-		margin-left: 8%;
-		margin-right: 8%;
-	}
+	margin-left: 8%;
+	margin-right: 8%;
 }
 
 .banner-title
@@ -1054,8 +1045,8 @@ label #bars
 	height: 60px;
 	background: #f52c33;
 	z-index: 400;
-	bottom: 80px;
-	right: 120px;
+	bottom: 30px;
+	right: 40px;
 	line-height: 60px;
 	color: #fff;
 	border-radius: 50%;
@@ -1075,21 +1066,12 @@ label #bars
 	vertical-align: top;
 }
 
-@media(max-width: 860px)
-{
-	.uni-contact-btn
-	{
-		right: 90px;
-		bottom: 60px;
-	}
-}
-
 @media(max-width: 771px)
 {
 	.uni-contact-btn
 	{
-		right: 70px;
-		bottom: 40px;
+		right: 40px;
+		bottom: 30px;
 		font-size: 30px;
 		line-height: 50px;
 		width: 50px;
@@ -1183,6 +1165,17 @@ label #bars
 	}
 }
 
+@media(min-width: 1050px)
+{
+	.contact-pop
+	{
+		width: 500px;
+		left: 75%;
+		margin-left: -250px;
+		padding: 0 20px 0 20px;
+	}
+}
+
 #pop-form
 {
 	font-size: 15px;
@@ -1261,6 +1254,14 @@ label #bars
 .thank-pop-smile
 {
 	font-size: 90px;
+}
+
+@media(min-width: 1050px) and (min-height: 620px)
+{
+	.pop-contact-input
+	{
+		height: 30px;
+	}
 }
 
 .footer-address
