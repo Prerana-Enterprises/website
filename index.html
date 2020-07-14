@@ -552,13 +552,25 @@
 				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4">
 					<div class="ml-sm-3 ml-0 mb-3 footer-head text-sm-left text-center"><b>Reach Out To Us</b></div>
 					<div class="row footer-data">
-						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
-						<div class="col-sm-10 col-9 mb-3 footer-address">Address...<br>Address...,<br>Address...,<br>Address...</div>
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
+						<div class="col-sm-10 col-9 mb-2">Name Surname<br>Name Surname</div>
 					</div>
-					<div class="text-center text-lg-left pb-2">
-						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i> Location</a>
-						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i> Call Us</a>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-mobile-alt"></i></div>
+						<div class="col-sm-10 col-9 mb-2">9999999999<br>9999999999</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="far fa-envelope"></i></div>
+						<div class="col-sm-10 col-9 mb-2">email.email.com</div>
+					</div>
+					<div class="row footer-data">
+						<div class="col-sm-2 col-3 text-right"><i class="fas fa-store-alt"></i></i></div>
+						<div class="col-sm-10 col-9 mb-2 footer-address">Address..., Address..., Address...,<br>Address..., Address..., Address...</div>
+					</div>
+					<div class="text-center text-md-left pb-2 pl-md-5">
+						<a href="#" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i></a>
+						<a href="#" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
+						<a href="#" class="btn btn-primary py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-phone-alt"></i></a>
 					</div>
 				</div>
 
@@ -581,8 +593,10 @@
 
 <script type="text/javascript">
 
+	var scrolldone = 0;
 
-	setTimeout(function() {if(window.innerHeight<830 && window.scrollY<50 && window.innerWidth<900){window.scroll(0,60);}}, 3500);
+
+	setTimeout(function() {if(window.innerHeight<830 && window.scrollY<50 && window.innerWidth<900 && scrolldone==0){window.scroll(0,60);}}, 3500);
 
 	if(window.scrollY>50)
 	{
@@ -655,6 +669,11 @@
 	}
 
 	window.onscroll = function() {
+		if(window.scrollY>50)
+		{
+			scrolldone=1;
+		}
+
 		navchange();
 
 		boom();
