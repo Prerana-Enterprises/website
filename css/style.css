@@ -30,6 +30,7 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 2s;
+	transition-timing-function: linear;
 }
 
 #banner
@@ -38,6 +39,7 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 2s;
+	transition-timing-function: linear;
 }
 
 nav
