@@ -1361,3 +1361,102 @@ label #bars
 	font-size: 14px;
 	padding: 0px 4px;
 }
+
+.services-cards
+{
+	border-radius: 10px;
+}
+
+.services-quote
+{
+	font-size: 26px;
+}
+
+@media(max-width: 991px)
+{
+	.services-quote
+	{
+		font-size: 22px;
+	}
+}
+
+@media(max-width: 767px)
+{
+	.services-quote
+	{
+		font-size: 18px;
+	}
+}
+
+@media(max-width: 538px)
+{
+	.services-quote
+	{
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 354px)
+{
+	.services-quote
+	{
+		font-size: 13px;
+	}
+}
+
+.quote
+{
+	background: #e4eaf2;
+	color: #474c4f;
+}
+
+.services-icon
+{
+	font-size: 80px;
+	color: #393185;
+}
+
+.services-title
+{
+	font-size: 30px;
+	color: #393185;
+}
+
+@media(max-width: 991px)
+{
+	.services-icon
+	{
+		font-size: 60px;
+	}
+
+	.services-title
+	{
+		font-size: 25px;
+	}
+}
+
+@media(max-width: 391px)
+{
+	.services-icon
+	{
+		font-size: 50px;
+	}
+
+	.services-title
+	{
+		font-size: 22px;
+	}
+}
+
+@media(max-width: 350px)
+{
+	.services-icon
+	{
+		font-size: 47px;
+	}
+
+	.services-title
+	{
+		font-size: 20px;
+	}
+}
