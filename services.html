@@ -54,10 +54,16 @@
 
 	<script type="text/javascript">
 		function dyheight() {
-			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			if(window.innerWidth > 991 || window.innerWidth < 575)
+			{
+				document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			}
+			else
+			{
+				document.getElementById('footer-image').style.width = (window.innerWidth/3)+'px';
+			}
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
-
 			page_height();
 		}
 
@@ -294,28 +300,217 @@
 
 
 
-<div class="container py-4">
+<div class="container py-5">
 	<div class="row">
-		<div class="col-md-4 col-sm-6 col-12 services-cards">
-			<div class="row">
-				<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
-				<div class="col-sm-12 col-9 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand1">
+				<div class="px-auto overflow-hidden service-data" id="service1">
+					<div class="position-absolute service-try" id="try1"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
+				</div>
+				<label for="expand1"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
+			
 		</div>
-		<div class="col-md-4 col-sm-6 col-12 services-cards">
-			<div class="row">
-				<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
-				<div class="col-sm-12 col-9 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand2">
+				<div class="px-auto overflow-hidden service-data" id="service2">
+					<div class="position-absolute service-try" id="try2"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-user-cog"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Customized Cartons</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We understand your requirements and provide corrugated boxes and sheets as per your specifications with best in class quality.</div>
+				</div>
+				<label for="expand2"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
+			
 		</div>
-		<div class="col-md-4 col-sm-6 col-12 services-cards">
-			<div class="row">
-				<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
-				<div class="col-sm-12 col-9 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand3">
+				<div class="px-auto overflow-hidden service-data" id="service3">
+					<div class="position-absolute service-try" id="try3"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-scroll"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Finest Corrugated Sheets</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We provide exclusive corrugated sheets as per your required size and specifications. Our size range is __ to __.</div>
+				</div>
+				<label for="expand3"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
+			
+		</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand4">
+				<div class="px-auto overflow-hidden service-data" id="service4">
+					<div class="position-absolute service-try" id="try4"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-apple-alt"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Cartons for Food</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We provide high quality corrugated boxes for your fruits and vegetables with perfect ventilation.</div>
+				</div>
+				<label for="expand4"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
+			</div>
+			
+		</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand5">
+				<div class="px-auto overflow-hidden service-data" id="service5">
+					<div class="position-absolute service-try" id="try5"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
+				</div>
+				<label for="expand5"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
+			</div>
+			
+		</div>
+		<div class="col-lg-4 col-md-6 col-12">
+			
+			<div class="mx-auto services-cards mb-4 mb-sm-5">
+				
+				<input type="checkbox" class="d-none service-expand" id="expand6">
+				<div class="px-auto overflow-hidden service-data" id="service6">
+					<div class="position-absolute service-try" id="try6"></div>
+					<div class="row">
+						<div class="col-sm-12 col-3 text-center services-icon my-sm-0 my-auto"><i class="fas fa-globe"></i></div>
+						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto">Export Quality Cartons</div>
+					</div>
+
+					<div class="container text-center services-para pt-lg-4 py-2 service-no">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
+				</div>
+				<label for="expand6"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
+			</div>
+			
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$("#service1").hover(function() {
+		if(window.innerWidth>575)
+			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
+			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
+	},function() {
+		$("#try1").css("height","0px");
+	});
+	$("#try1").hover(function() {
+		if(window.innerWidth>575)
+			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
+			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
+	},function() {
+		$("#try1").css("height","0px");
+	});
+
+	$("#service2").hover(function() {
+		if(window.innerWidth>575)
+			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
+			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
+	},function() {
+		$("#try2").css("height","0px");
+	});
+	$("#try2").hover(function() {
+		if(window.innerWidth>575)
+			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
+			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
+	},function() {
+		$("#try2").css("height","0px");
+	});
+
+	$("#service3").hover(function() {
+		if(window.innerWidth>575)
+			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
+			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
+	},function() {
+		$("#try3").css("height","0px");
+	});
+	$("#try3").hover(function() {
+		if(window.innerWidth>575)
+			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
+			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
+	},function() {
+		$("#try3").css("height","0px");
+	});
+
+	$("#service4").hover(function() {
+		if(window.innerWidth>575)
+			$("#try4").css("height",document.getElementById('service4').clientHeight+'px');
+			$("#try4").css("width",document.getElementById('service4').clientWidth+'px');
+	},function() {
+		$("#try4").css("height","0px");
+	});
+	$("#try4").hover(function() {
+		if(window.innerWidth>575)
+			$("#try4").css("height",document.getElementById('service4').clientHeight+'px');
+			$("#try4").css("width",document.getElementById('service4').clientWidth+'px');
+	},function() {
+		$("#try4").css("height","0px");
+	});
+
+	$("#service5").hover(function() {
+		if(window.innerWidth>575)
+			$("#try5").css("height",document.getElementById('service5').clientHeight+'px');
+			$("#try5").css("width",document.getElementById('service5').clientWidth+'px');
+	},function() {
+		$("#try5").css("height","0px");
+	});
+	$("#try5").hover(function() {
+		if(window.innerWidth>575)
+			$("#try5").css("height",document.getElementById('service5').clientHeight+'px');
+			$("#try5").css("width",document.getElementById('service5').clientWidth+'px');
+	},function() {
+		$("#try5").css("height","0px");
+	});
+
+	$("#service6").hover(function() {
+		if(window.innerWidth>575)
+			$("#try6").css("height",document.getElementById('service6').clientHeight+'px');
+			$("#try6").css("width",document.getElementById('service6').clientWidth+'px');
+	},function() {
+		$("#try6").css("height","0px");
+	});
+	$("#try6").hover(function() {
+		if(window.innerWidth>575)
+			$("#try6").css("height",document.getElementById('service6').clientHeight+'px');
+			$("#try6").css("width",document.getElementById('service6').clientWidth+'px');
+	},function() {
+		$("#try6").css("height","0px");
+	});
+
+
+	var service = document.getElementsByClassName('service-try');
+	for(var i=0;i<service.length;i++)
+	{
+		service[i].style.width = document.getElementById('service6').clientWidth+'px';
+	}
+</script>
 
 
 
@@ -389,7 +584,7 @@
 				</div>
 
 
-				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
+				<div class="col-lg-4 col-12 pt-sm-0 py-2" id="footer-3">
 					<div class="w-75 mx-auto" id="footer-image-div">
 						<img src="images/2.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
 					</div>

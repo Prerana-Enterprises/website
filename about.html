@@ -54,7 +54,14 @@
 
 	<script type="text/javascript">
 		function dyheight() {
-			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			if(window.innerWidth > 991 || window.innerWidth < 575)
+			{
+				document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
+			}
+			else
+			{
+				document.getElementById('footer-image').style.width = (window.innerWidth/3)+'px';
+			}
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
 			page_height();
@@ -357,7 +364,7 @@
 				</div>
 
 
-				<div class="col-lg-4 col-12 d-lg-block d-sm-none d-block pt-sm-0 py-2" id="footer-3">
+				<div class="col-lg-4 col-12 pt-sm-0 py-2" id="footer-3">
 					<div class="w-75 mx-auto" id="footer-image-div">
 						<img src="images/2.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
 					</div>

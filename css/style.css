@@ -1378,6 +1378,8 @@ label #bars
 .services-cards
 {
 	border-radius: 10px;
+	border: solid 1px rgba(0,0,0,0.3);
+	width: 100%;
 }
 
 .services-quote
@@ -1435,6 +1437,11 @@ label #bars
 	color: #393185;
 }
 
+.services-para
+{
+	font-size: 24px
+}
+
 @media(max-width: 991px)
 {
 	.services-icon
@@ -1445,6 +1452,11 @@ label #bars
 	.services-title
 	{
 		font-size: 25px;
+	}
+
+	.services-para
+	{
+		font-size: 20px
 	}
 }
 
@@ -1459,6 +1471,11 @@ label #bars
 	{
 		font-size: 22px;
 	}
+
+	.services-para
+	{
+		font-size: 18px
+	}
 }
 
 @media(max-width: 350px)
@@ -1471,5 +1488,107 @@ label #bars
 	.services-title
 	{
 		font-size: 20px;
+	}
+}
+
+.down-btn
+{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.down-btn
+{
+	cursor: pointer;
+}
+
+.service-expand+div
+{
+	transition: 0.5s;
+}
+
+.service-expand ~ label div div
+{
+	transition: 0.5s;
+}
+
+.service-expand:checked ~ label div div
+{
+	transform: rotate(180deg);
+}
+
+@media(max-width: 575px)
+{
+
+	.service-expand+div
+	{
+		max-height: 90px;
+	}
+	.service-expand:checked+div
+	{
+		max-height: 1000px;
+	}
+}
+
+@media(max-width: 391px)
+{
+
+	.service-expand+div
+	{
+		max-height: 75px;
+	}
+	.service-expand:checked+div
+	{
+		max-height: 1000px;
+	}
+}
+
+@media(max-width: 350px)
+{
+
+	.service-expand+div
+	{
+		max-height: 70px;
+	}
+	.service-expand:checked+div
+	{
+		max-height: 1000px;
+	}
+}
+
+.service-no
+{
+	z-index: 2;
+}
+
+.service-try
+{
+	height: 0;
+	border-radius: 10px;
+	transition: 0.5s;
+	z-index: -1;
+	background: rgba(247, 60, 2, 1);
+}
+
+.service-data div div
+{
+	transition: 0.5s;
+}
+
+.service-data div
+{
+	transition: 0.5s;
+}
+
+@media(min-width: 576px)
+{
+	.service-data:hover div div
+	{
+		color: #fff;
+	}
+
+	.service-data:hover div
+	{
+		color: #fff;
 	}
 }
