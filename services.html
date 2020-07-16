@@ -54,16 +54,38 @@
 
 	<script type="text/javascript">
 		function dyheight() {
-			if(window.innerWidth > 991 || window.innerWidth < 575)
-			{
-				document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
-			}
-			else
-			{
-				document.getElementById('footer-image').style.width = (window.innerWidth/3)+'px';
-			}
+			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
+
+			var service_data = document.getElementsByClassName('service-data');
+			for(var i=0;i<service_data.length;i++)
+			{
+				service_data[i].style.height = 'auto';
+			}
+
+			var service = document.getElementsByClassName('service-try');
+			for(var i=0;i<service.length;i++)
+			{
+				service[i].style.width = document.getElementById('service6').clientWidth+'px';
+			}
+
+			if(window.innerWidth>767)
+			{
+				var max = service_data[0].clientHeight;
+				for(var i=1;i<service_data.length;i++)
+				{
+					if(service_data[i].clientHeight>max)
+					{
+						max = service_data[i].clientHeight;
+					}
+				}
+				for(var i=0;i<service_data.length;i++)
+				{
+					service_data[i].style.height = max+'px';
+				}
+			}
+
 			page_height();
 		}
 
@@ -336,7 +358,7 @@
 
 <div class="container py-5">
 	<div class="row">
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -355,7 +377,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -374,7 +396,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -393,7 +415,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -412,7 +434,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -431,7 +453,7 @@
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
@@ -545,11 +567,7 @@
 	});
 
 
-	var service = document.getElementsByClassName('service-try');
-	for(var i=0;i<service.length;i++)
-	{
-		service[i].style.width = document.getElementById('service6').clientWidth+'px';
-	}
+
 </script>
 
 
@@ -565,7 +583,7 @@
 			<div class="row">
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt">
+				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
 					<div class="ml-sm-3 ml-lg-0 ml-0 text-sm-left text-center text-sm-left mb-2 mb-sm-3 footer-head"><b>Services</b></div>
 					<div class="row footer-data">
 						<div class="col-12 text-left mb-2">We have expertise in providing corrugated boxes to the following sectors:</div>
@@ -598,7 +616,7 @@
 
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt">
+				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
 					<div class="ml-sm-3 ml-0 mb-3 footer-head text-sm-left text-center"><b>Reach Out To Us</b></div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-3 text-right"><i class="far fa-id-card"></i></div>
@@ -741,6 +759,7 @@
 
 	window.onload = function() {
 		page_height();
+		boom();
 		setTimeout(function() {page_height();}, 2200);
 	};
 
