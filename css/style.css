@@ -1427,26 +1427,27 @@ label #bars
 
 .services-icon
 {
-	font-size: 80px;
-	color: #393185;
+	font-size: 50px;
+	color: #ec5b53;
 }
 
 .services-title
 {
-	font-size: 30px;
-	color: #393185;
+	font-size: 25px;
+	color: #1c165c;
 }
 
 .services-para
 {
-	font-size: 24px
+	font-size: 16px;
+	color: #57667e;
 }
 
 @media(max-width: 991px)
 {
 	.services-icon
 	{
-		font-size: 60px;
+		font-size: 50px;
 	}
 
 	.services-title
@@ -1456,7 +1457,7 @@ label #bars
 
 	.services-para
 	{
-		font-size: 20px
+		font-size: 16px
 	}
 }
 
@@ -1482,7 +1483,7 @@ label #bars
 
 	.services-para
 	{
-		font-size: 18px
+		font-size: 16px
 	}
 }
 
@@ -1538,7 +1539,7 @@ label #bars
 
 	.service-expand+div
 	{
-		max-height: 90px;
+		max-height: 75px;
 	}
 	.service-expand:checked+div
 	{
@@ -1596,7 +1597,7 @@ label #bars
 	border-radius: 10px;
 	transition: 0.5s;
 	z-index: -1;
-	background: rgba(247, 60, 2, 1);
+	background: #ff3d1c;
 }
 
 .service-data div div
@@ -1611,13 +1612,23 @@ label #bars
 
 @media(min-width: 576px)
 {
-	.service-data:hover div div
+	.service-data:hover div .services-title
 	{
 		color: #fff;
 	}
 
-	.service-data:hover div
+	.service-data:hover .services-para
 	{
 		color: #fff;
 	}
+}
+
+.services-circle
+{
+	width: 100px;
+	height: 100px;
+	background: #fff4f4;
+	border-radius: 50px;
+	padding-top: 13px;
+	margin-bottom: 30px;
 }
