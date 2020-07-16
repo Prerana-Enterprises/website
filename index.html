@@ -244,9 +244,19 @@
 			var mt = document.getElementsByClassName('boom-mt');
 			for(var i=0;i<mt.length;i++)
 			{
-				if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-600)
+				if(window.innerWidth>600)
 				{
-					mt[i].style.marginTop = '0';
+					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-600)
+					{
+						mt[i].style.marginTop = '0';
+					}
+				}
+				else
+				{
+					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-750)
+					{
+						mt[i].style.marginTop = '0';
+					}
 				}
 			}
 		}
