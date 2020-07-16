@@ -241,6 +241,15 @@
 					opacity[i].style.opacity = '1';
 				}
 			}
+			var mt = document.getElementsByClassName('boom-mt');
+			for(var i=0;i<mt.length;i++)
+			{
+				console.log(mt[i].getBoundingClientRect().top);
+				if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-700)
+				{
+					mt[i].style.marginTop = '0';
+				}
+			}
 		}
 
 		function contact_vis()
@@ -381,10 +390,10 @@
 
 
 <div class="aboutus-bg">
-	<h2 class="text-center subname pt-3 pb-md-5 pb-4 proud-client">More About Us</h2>
+	<h2 class="text-center subname pt-3 pb-md-5 pb-4 proud-client boom-opacity">More About Us</h2>
 
 	<div class="row home-product text-center pb-5">
-		<div class="col-md-5 col-12">
+		<div class="col-md-5 col-12 boom-opacity">
 			<div class='photo-stack' id="photo-stack">
 			  <img src='images/4882.jpg' class="stack-pics" id="stack-pics" onload="dyheight();">
 			  <img src='images/569.jpg' class="stack-pics" id="stack-pics">
@@ -394,7 +403,7 @@
 			</div>
 		</div>
 		<div class="col-md-7 col-12">
-			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2">
+			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2 boom-mt">
 				<p class="boom-opacity">Here at Prerana Enterprises, we're all about <i>cardboard</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="mb-2 boom-opacity">If you are looking for custom-printed packaging boxes or plain corrugated boxes, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
 				<div class="mr-sm-5 text-right mt-0"><a href="about" class="py-1 btn btn-dark home-profile-info">More About Us!</a></div>
 			</div>
