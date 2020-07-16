@@ -244,19 +244,23 @@
 			var mt = document.getElementsByClassName('boom-mt');
 			for(var i=0;i<mt.length;i++)
 			{
-				if(window.innerWidth>600)
+				if(window.innerWidth>600 && window.innerHeight<900)
 				{
 					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-600)
 					{
 						mt[i].style.marginTop = '0';
 					}
 				}
-				else
+				else if(window.innerHeight<900)
 				{
 					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-750)
 					{
 						mt[i].style.marginTop = '0';
 					}
+				}
+				else
+				{
+					mt[i].style.marginTop = '0';
 				}
 			}
 		}
