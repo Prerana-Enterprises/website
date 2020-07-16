@@ -266,6 +266,11 @@ label #bars
 
 @media(max-width: 420px)
 {
+	nav ul
+	{
+		text-align: left;
+	}
+	
 	nav ul li a
 	{
 		font-size: 14px;
