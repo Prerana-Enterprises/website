@@ -776,13 +776,14 @@
 		page_height();
 		boom();
 
-		if(document.getElementById('check').checked && no_of_click==0)
-		{
-			document.getElementById('check').checked=false;
-			black();
-		}
-		
+
+
 		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+				black();
+			}
 			page_height();
 		}, 2200);
 	};
