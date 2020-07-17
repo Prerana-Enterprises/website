@@ -326,7 +326,7 @@
 </head>
 <body>
 
-	<div class="banner" id="banner" onload="boom();">
+	<div class="banner" id="banner">
 
 		<nav id="nav">
 			<input type="checkbox" id="check" onchange="black();">
@@ -342,7 +342,7 @@
 				<li><a class="navbar-item" href="contact"><i class="fas fa-address-card"></i> Contact Us</a></li>
 			</ul>
 		</nav>
-		<div class="banner-content boom-mt boom-opacity">
+		<div class="banner-content boom-mt boom-opacity" onload="boom();">
 			<h1 class="banner-title pt-5 text-white">
 				Corrugated Boxes Tailored to your Needs!
 			</h1>
@@ -764,9 +764,11 @@
 		document.getElementById('photo-stack').appendChild(ele);
 	}, 3000);
 
+	document.getElementById('check').checked=false;
+	alert('message?: DOMString');
 
 	window.onload = function() {
-		document.getElementById('check').checked=false;
+		
 		page_height();
 		boom();
 		setTimeout(function() {page_height();}, 2200);
