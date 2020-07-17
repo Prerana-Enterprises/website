@@ -764,14 +764,17 @@
 		document.getElementById('photo-stack').appendChild(ele);
 	}, 3000);
 
-	document.getElementById('check').checked=false;
-	alert('message?: DOMString');
+
 
 	window.onload = function() {
 		
 		page_height();
 		boom();
-		setTimeout(function() {page_height();}, 2200);
+		setTimeout(function() {
+			page_height();
+			document.getElementById('check').checked=false;
+			alert('message?: DOMString');
+		}, 2200);
 	};
 
 		
