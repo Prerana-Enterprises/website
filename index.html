@@ -775,13 +775,15 @@
 		
 		page_height();
 		boom();
+
+		if(document.getElementById('check').checked && no_of_click==0)
+		{
+			document.getElementById('check').checked=false;
+			black();
+		}
+		
 		setTimeout(function() {
 			page_height();
-			if(document.getElementById('check').checked && no_of_click==0)
-			{
-				document.getElementById('check').checked=false;
-				black();
-			}
 		}, 2200);
 	};
 
