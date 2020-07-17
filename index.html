@@ -716,6 +716,11 @@
 		}
 	}
 
+	var no_of_click = 0;
+	document.getElementById('bars').onclick = function() {
+		no_of_click++;
+	}
+
 	window.onscroll = function() {
 
 
@@ -772,8 +777,11 @@
 		boom();
 		setTimeout(function() {
 			page_height();
-			document.getElementById('check').checked=false;
-			black();
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+				black();
+			}
 		}, 2200);
 	};
 
