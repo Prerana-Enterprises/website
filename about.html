@@ -252,6 +252,30 @@
 				document.getElementById('uni-contact-btn').style.transition = '0s';
 			}, 550);
 		}
+
+		function scroller()
+		{
+			var scroll_ele = document.getElementsByClassName('scroll');
+			var time = 5000;
+			var gap = 10;
+			var steps = time/gap;
+			var count = 0;
+
+			var interval = setInterval(function() {
+				if(count<=steps)
+				{
+					for(var i=0;i<scroll_ele.length;i++)
+					{
+						scroll_ele[i].innerHTML = Math.floor((count/steps)*(parseInt(scroll_ele[i].getAttribute('value'), 10)));
+					}
+					count++;
+				}
+				else
+				{
+					clearInterval(interval);
+				}
+			}, gap);
+		}
 	</script>
 
 </head>
@@ -324,7 +348,62 @@
 
 
 
+<div class="container py-5">
+	<div class="row">
+		<div class="col-12 col-md-7 col-lg-8">
+			<div class="home-profile-info text-center text-md-left boom-mt boom-opacity">
+				<p class="boom-opacity">Prerana Enterprises is all about <i>corrugation</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="mb-2 boom-opacity">If you are looking for custom-printed corrugated packing material, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
+				<p class="mb-2 boom-opacity">Since its founding at Goregaon (Mumbai) in 1985 and later moving to Dapoli in 1998 for expansion purpose, Prerana Enterprises has developed exponentially to become a leading supplier of Corrugated Boxes (Paper Board Cartons), in Ratnagiri, Raigad, Panvel and Navi Mumbai.</p>
+			</div>
+		</div>
+		<div class="col-12 col-md-5 col-lg-4 boom-opacity">
+			<div class="about-pic-div"><img src="images/sky_spare.jpg" class="about-pic"></div>
+		</div>
+	</div>
+</div>
 
+<div class="achievement-bg py-5">
+	<div class="container">
+		<div class="row" id="scroll-trigger">
+			<div class="col-md-3 col-6 text-center">
+				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="20">0</span>+</b></p>
+				<p class="text-white mb-md-0 mb-5 scroll-info"><b>Happy Clients</b></p>
+			</div>
+			<div class="col-md-3 col-6 text-center">
+				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="25">0</span> Years</b></p>
+				<p class="text-white mb-md-0 mb-5 scroll-info"><b>Experience</b></p>
+			</div>
+			<div class="col-md-3 col-6 text-center">
+				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="1500">0</span> kg</b></p>
+				<p class="text-white mb-0 scroll-info"><b>Working Capacity</b></p>
+			</div>
+			<div class="col-md-3 col-6 text-center">
+				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="50">0</span></b></p>
+				<p class="text-white mb-0 scroll-info"><b>Jobs Provided</b></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="about-awards">
+	<div class="quote py-4">
+		<div class="container">
+			<h2 class="text-center subname pb-4 proud-client boom-opacity">Awards Won</h2>
+		</div>
+		<div class="container">
+			<blockquote class="blockquote text-center">
+				<p class="mb-0">“M/s Prerana Enterprises receives an Industrial Excellence Award for Rural Development”</p>
+				<footer class="blockquote-footer">Delhi, <cite title="Source Title">2004</cite></footer>
+			</blockquote>
+			<blockquote class="blockquote mb-0 text-center">
+				<p class="mb-0">“M/s Prerana Enterprises receives a Best Small Scale Industry Award from Disstrict Industry Centre for 2004”</p>
+				<footer class="blockquote-footer">Ratnagiri, <cite title="Source Title">2004</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+</div>
 
 
 
@@ -473,6 +552,8 @@
 		}
 	}
 
+	var animation = true;
+
 	window.onscroll = function() {
 
 		navchange();
@@ -481,7 +562,14 @@
 
 		contact_vis();
 
+		if((document.getElementById('scroll-trigger').offsetTop-window.innerHeight)<window.scrollY && animation)
+		{
+			animation = false;
+			scroller();
+		}
+
 	}
+
 
 	
 
