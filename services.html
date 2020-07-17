@@ -53,6 +53,8 @@
 
 
 	<script type="text/javascript">
+		var no_of_click = 0;
+
 		function dyheight() {
 			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
@@ -91,6 +93,7 @@
 
 
 		function black(){
+			no_of_click++;
 			if(document.getElementById('check').checked)
 			{
 				document.getElementById('nav').style.background = '#fff';
@@ -717,6 +720,8 @@
 		}
 	}
 
+
+
 	window.onscroll = function() {
 
 		navchange();
@@ -756,12 +761,20 @@
 		boom();
 	}
 
+	boom();
+
 
 	window.onload = function() {
 		document.getElementById('check').checked=false;
 		page_height();
 		boom();
-		setTimeout(function() {page_height();}, 2200);
+		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+			}
+			page_height();
+		}, 2200);
 	};
 
 		

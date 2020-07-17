@@ -53,6 +53,8 @@
 
 
 	<script type="text/javascript">
+		var no_of_click = 0;
+
 		function dyheight() {
 			if(window.innerWidth > 991 || window.innerWidth < 575)
 			{
@@ -69,6 +71,7 @@
 
 
 		function black(){
+			no_of_click++;
 			if(document.getElementById('check').checked)
 			{
 				document.getElementById('nav').style.background = '#fff';
@@ -552,6 +555,8 @@
 		}
 	}
 
+
+
 	var animation = true;
 
 	window.onscroll = function() {
@@ -607,7 +612,13 @@
 		document.getElementById('check').checked=false;
 		page_height();
 		boom();
-		setTimeout(function() {page_height();console.log(1);}, 2200);
+		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+			}
+			page_height();
+		}, 2200);
 	};
 
 		
