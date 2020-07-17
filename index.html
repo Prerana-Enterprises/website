@@ -239,7 +239,15 @@
 			var opacity = document.getElementsByClassName('boom-opacity');
 			for(var i=0;i<opacity.length;i++)
 			{
-				if(window.scrollY+((9.5*window.innerHeight)/10)>opacity[i].offsetTop)
+				if(window.innerHeight<900)
+				{
+					if(window.scrollY+((9.5*window.innerHeight)/10)>opacity[i].offsetTop)
+					{
+						opacity[i].style.opacity = '1';
+						opacity[i].style.marginTop = '0';
+					}
+				}
+				else
 				{
 					opacity[i].style.opacity = '1';
 				}
@@ -775,7 +783,6 @@
 	window.onload = function() {
 		
 		page_height();
-		boom();
 
 
 
@@ -784,6 +791,7 @@
 			{
 				document.getElementById('check').checked=false;
 			}
+			boom();
 			page_height();
 		}, 2200);
 	};
