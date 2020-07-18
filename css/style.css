@@ -42,7 +42,7 @@ body
 	background: linear-gradient(rgba(12,45,70,0.8),rgba(12,45,70,0.6)), url(../images/sky.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	transition: 2s;
+	transition: 0.5s;
 	transition-timing-function: linear;
 }
 
@@ -59,7 +59,7 @@ body
 	padding-top: 90px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	transition: 1s;
+	transition: 2s;
 	transition-timing-function: linear;
 }
 
