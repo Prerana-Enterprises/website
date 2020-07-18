@@ -199,28 +199,7 @@
 				else
 				{
 					opacity[i].style.opacity = '1';
-				}
-			}
-			var mt = document.getElementsByClassName('boom-mt');
-			for(var i=0;i<mt.length;i++)
-			{
-				if(window.innerWidth>600 && window.innerHeight<900)
-				{
-					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-600)
-					{
-						mt[i].style.marginTop = '0';
-					}
-				}
-				else if(window.innerHeight<900)
-				{
-					if(window.innerHeight>(mt[i].getBoundingClientRect().top)+window.innerHeight-750)
-					{
-						mt[i].style.marginTop = '0';
-					}
-				}
-				else
-				{
-					mt[i].style.marginTop = '0';
+					opacity[i].style.marginTop = '0';
 				}
 			}
 		}
@@ -267,7 +246,7 @@
 		function scroller()
 		{
 			var scroll_ele = document.getElementsByClassName('scroll');
-			var time = 5000;
+			var time = 4000;
 			var gap = 10;
 			var steps = time/gap;
 			var count = 0;
@@ -408,7 +387,7 @@
 				<p class="mb-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives an Industrial Excellence Award for Rural Development”</p>
 				<footer class="blockquote-footer">Delhi, <cite title="Source Title">2004</cite></footer>
 			</blockquote>
-			<blockquote class="blockquote mb-0 text-center">
+			<blockquote class="blockquote pb-5 text-center">
 				<p class="mb-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives a Best Small Scale Industry Award from District Industry Centre for 2004”</p>
 				<footer class="blockquote-footer">Ratnagiri, <cite title="Source Title">2004</cite></footer>
 			</blockquote>
@@ -584,7 +563,11 @@
 	}
 
 
-	
+	if((document.getElementById('scroll-trigger').offsetTop-window.innerHeight)<window.scrollY && animation)
+	{
+		animation = false;
+		scroller();
+	}
 
 
 
