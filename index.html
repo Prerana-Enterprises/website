@@ -204,11 +204,7 @@
 			var car_item = document.getElementsByClassName('carousel-item');
 			for(var i=0; i<car_item.length;i++)
 			{
-				if(car_item[i].classList.contains("active"))
-				{
-					car_item[i].classList.remove("active");
-					break;
-				}
+				car_item[i].classList.remove("active");
 			}
 			car_item[0].classList.add("active");
 
