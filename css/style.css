@@ -1945,6 +1945,7 @@ label #bars
 	display: inline-block;
 	color: #83868c;
 	font-weight: 600;
+	font-size: 30px;
 }
 
 .exp-unit-2
@@ -1967,7 +1968,7 @@ label #bars
 
 	.exp-unit-area h4
 	{
-		font-size: 20px;
+		font-size: 25px;
 	}
 }
 
@@ -1994,5 +1995,13 @@ label #bars
 	.exp-unit-area
 	{
 		margin-left: 25px;
+	}
+}
+
+@media(max-width: 350px)
+{
+	.exp-unit-area h4
+	{
+		font-size: 22px;
 	}
 }
