@@ -135,7 +135,7 @@ nav ul li a:before
 	bottom: 0;
 	height: 3px;
 	width: 100%;
-	background: #e85022;
+	background: #ff3d1c;
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform .4s linear;
@@ -445,6 +445,15 @@ label #bars
 {
 	width: 20%;
 	font-size: 18px;
+	background: #ff3d1c;
+	color: #fff;
+	transition: 0.4s;
+}
+
+.banner-btn:hover
+{
+	color: #fff;
+	opacity: 0.92;
 }
 
 @media(max-width: 991px)
@@ -513,7 +522,12 @@ label #bars
 		padding-right: 0px;
 		padding-left: 0px;
 	}
-}		
+}
+
+.ser-btn
+{
+	background: #001b5e;
+}	
 
 #notnav
 {
@@ -666,7 +680,7 @@ label #bars
 
 .proud-client
 {
-	color: #090729;
+	color: #001b5e;
 }
 
 .home-goals
@@ -779,6 +793,7 @@ label #bars
 {
 	font-family: title;
 	font-size: 25px;
+	color: #555;
 }
 
 @media(max-width: 992px)
@@ -829,7 +844,7 @@ label #bars
 
 .proudy
 {
-	background: #e8eafd;
+	background: #e4eaf2;
 }
 
 .client-strip
@@ -879,7 +894,7 @@ label #bars
 
 .main-footer
 {
-	background: #1e272e;
+	background: #13283a;
 	color: #eeeeee;
 }
 
@@ -901,7 +916,7 @@ label #bars
 
 .credit-box
 {
-	background: #1e272e;
+	background: #13283a;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -956,7 +971,7 @@ label #bars
 
 .ev_form
 {
-    border: 1px solid #e09b9b;
+    border: 1px solid rgba(255,61,30,0.5);
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -977,6 +992,15 @@ label #bars
 .ev_btn
 {
     width: 25%;
+    background: #ff3d1c;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.ev_btn:hover
+{
+	color: #fff;
+	opacity: 0.92;
 }
 
 .txt-area
@@ -1001,7 +1025,7 @@ label #bars
 	font-family: sans-serif;
 	font-size: 20px;
 	padding: 5px 0;
-	color: #000;
+	color: #001b5e;
 }
 
 .contact-call
@@ -1043,7 +1067,7 @@ label #bars
 .contact-info-special
 {
 	font-family: sans-serif;
-	color: rgba(0,0,0,0.75);
+	color: #001b5e;
 	padding: 5px 0;
 	font-size: 16px;
 }
@@ -1092,7 +1116,7 @@ label #bars
 {
 	width: 60px;
 	height: 60px;
-	background: #f52c33;
+	background: #ff3d1c;
 	z-index: 400;
 	bottom: 30px;
 	right: 40px;
@@ -1269,6 +1293,15 @@ label #bars
 #pop-submit
 {
 	font-size: 15px;
+	background: #ff3d1c;
+    color: #fff;
+    transition: 0.4s;
+}
+
+#pop-submit:hover
+{
+	color: #fff;
+	opacity: 0.92;
 }
 
 .close-pop
@@ -1456,7 +1489,7 @@ label #bars
 .services-title
 {
 	font-size: 25px;
-	color: #1c165c;
+	color: #001b5e;
 }
 
 .services-para
@@ -1659,6 +1692,11 @@ label #bars
 {
 	margin-top: 50px;
 	transition: 0.5s;
+}
+
+.about-info
+{
+	color: #474c4f;
 }
 
 .about-pic
@@ -1909,7 +1947,7 @@ label #bars
 
 .home-about-para
 {
-	color: #888;
+	color: #666;
 }
 
 .exp-show
@@ -1943,7 +1981,7 @@ label #bars
 .exp-unit-area h4
 {
 	display: inline-block;
-	color: #83868c;
+	color: #76797f;
 	font-weight: 600;
 	font-size: 30px;
 }
@@ -2004,4 +2042,9 @@ label #bars
 	{
 		font-size: 22px;
 	}
+}
+
+.color-orange
+{
+	color: #ff3d1c;
 }
