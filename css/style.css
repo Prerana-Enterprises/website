@@ -1875,6 +1875,11 @@ label #bars
 	line-height: 1.5;
 }
 
+.cite
+{
+	font-size: 17px;
+}
+
 @media(max-width: 991px)
 {
 	.testimonial-name
@@ -1885,6 +1890,11 @@ label #bars
 	.testimonial-height
 	{
 		font-size: 22px;
+	}
+
+	.cite
+	{
+		font-size: 15px;
 	}
 }
 
@@ -1898,6 +1908,11 @@ label #bars
 	.testimonial-height
 	{
 		font-size: 20px;
+	}
+
+	.cite
+	{
+		font-size: 15px;
 	}
 }
 
@@ -1925,6 +1940,11 @@ label #bars
 	{
 		font-size: 18px;
 	}
+
+	.cite
+	{
+		font-size: 14px;
+	}
 }
 
 @media(max-width: 333px)
@@ -1937,6 +1957,11 @@ label #bars
 	.testimonial-height
 	{
 		font-size: 16px;
+	}
+
+	.cite
+	{
+		font-size: 13px;
 	}
 }
 
