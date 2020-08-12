@@ -551,18 +551,15 @@
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
-				<input type="checkbox" class="d-none service-expand" id="expand1">
 				<div class="px-auto overflow-hidden service-data" id="service1">
-					<div class="position-absolute service-try d-sm-block d-none" id="try1"></div>
-					<div class="row pt-sm-5">
-						<div class="services-circle text-center mx-auto d-sm-block d-none"><div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto"><i class="fas fa-globe"></i></div></div>
-						<div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto d-block d-sm-none"><i class="fas fa-globe"></i></div>
-						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto"><label for="expand1">Export Quality Cartons</label></div>
+					<div class="position-absolute service-try d-block" id="try1"></div>
+					<div class="row pt-5">
+						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-globe"></i></div></div>
+						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Export Quality Cartons</label></div>
 					</div>
 
 					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
 				</div>
-				<label for="expand1"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
 			
 		</div>
@@ -570,37 +567,31 @@
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
-				<input type="checkbox" class="d-none service-expand" id="expand2">
 				<div class="px-auto overflow-hidden service-data" id="service2">
-					<div class="position-absolute service-try d-sm-block d-none" id="try2"></div>
-					<div class="row pt-sm-5">
-						<div class="services-circle text-center mx-auto d-sm-block d-none"><div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto"><i class="fas fa-user-cog"></i></div></div>
-						<div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto d-block d-sm-none"><i class="fas fa-user-cog"></i></div>
-						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto"><label for="expand2">Customized Cartons</label></div>
+					<div class="position-absolute service-try d-block" id="try2"></div>
+					<div class="row pt-5">
+						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-user-cog"></i></div></div>
+						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Customized Cartons</label></div>
 					</div>
 
 					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We understand your requirements and provide corrugated boxes and sheets as per your specifications with best in class quality.</div>
 				</div>
-				<label for="expand2"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity d-lg-block d-none">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity d-block d-md-none d-lg-block">
 			
 			<div class="mx-auto services-cards mb-4 mb-sm-5">
 				
-				<input type="checkbox" class="d-none service-expand" id="expand3">
 				<div class="px-auto overflow-hidden service-data" id="service3">
-					<div class="position-absolute service-try d-sm-block d-none" id="try3"></div>
-					<div class="row pt-sm-5">
-						<div class="services-circle text-center mx-auto d-sm-block d-none"><div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto"><i class="fas fa-scroll"></i></div></div>
-						<div class="col-sm-12 col-3 text-center services-icon my-0 my-sm-auto d-block d-sm-none"><i class="fas fa-scroll"></i></div>
-						<div class="col-sm-12 col-9 px-sm-3 pl-0 text-sm-center text-left services-title my-sm-0 my-auto"><label for="expand3">Finest Corrugated Sheets</label></div>
+					<div class="position-absolute service-try d-block" id="try3"></div>
+					<div class="row pt-5">
+						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-scroll"></i></div></div>
+						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Finest Corrugated Sheets</label></div>
 					</div>
 
 					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We provide exclusive corrugated sheets as per your required size and specifications. Our size range is __ to __.</div>
 				</div>
-				<label for="expand3"><div class="container d-block d-sm-none down-btn text-center quote"><div><i class="fas fa-angle-down"></i></div></div></label>
 			</div>
 			
 		</div>
@@ -611,14 +602,12 @@
 
 <script type="text/javascript">
 	$("#service1").hover(function() {
-		if(window.innerWidth>575)
 			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
 			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
 	},function() {
 		$("#try1").css("height","0px");
 	});
 	$("#try1").hover(function() {
-		if(window.innerWidth>575)
 			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
 			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
 	},function() {
@@ -626,14 +615,12 @@
 	});
 
 	$("#service2").hover(function() {
-		if(window.innerWidth>575)
 			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
 			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
 	},function() {
 		$("#try2").css("height","0px");
 	});
 	$("#try2").hover(function() {
-		if(window.innerWidth>575)
 			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
 			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
 	},function() {
@@ -641,14 +628,12 @@
 	});
 
 	$("#service3").hover(function() {
-		if(window.innerWidth>575)
 			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
 			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
 	},function() {
 		$("#try3").css("height","0px");
 	});
 	$("#try3").hover(function() {
-		if(window.innerWidth>575)
 			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
 			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
 	},function() {
@@ -825,11 +810,11 @@
 	        <div class="carousel-inner" role="listbox">
 	            <div class="carousel-item active text-center p-4">
 	            	<h5 class="testimonial-height" id="longest">Excellent and Timely Service with Good Management.<br>Very Good!</h5>
-	                <p class="testimonial-name">- Varun Mahaajan <b class="cite"><i>(Mahaajan Beverage)</i></b><br></p>
+	                <p class="testimonial-name">- <b>Varun Mahaajan</b> <b class="cite"><i>(Mahaajan Beverage)</i></b><br></p>
 	            </div>
 	            <div class="carousel-item text-center p-4">
 	            	<h5 class="testimonial-height">Lots of Varieties and Cost Effective.<br>Impressive!</h5>
-	                <p class="testimonial-name">- Manoj Gujar <b class="cite"><i>(Mangoes Trader)</i></b><br></p>
+	                <p class="testimonial-name">- <b>Manoj Gujar</b> <b class="cite"><i>(Mangoes Trader)</i></b><br></p>
 	            </div>
 	        </div>
 	        <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
