@@ -1109,6 +1109,23 @@
 		}, 2200);
 	};
 
+	document.onload = function() {
+		
+		page_height();
+
+
+
+		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+			}
+			boom();
+			page_height();
+			dyheight();
+		}, 2200);
+	};
+
 		
 	
 </script>

@@ -430,6 +430,18 @@
 		}, 2200);
 	};
 
+	document.onload = function() {
+		document.getElementById('check').checked=false;
+		page_height();
+		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+			}
+			page_height();
+		}, 2200);
+	};
+
 		
 	
 </script>
