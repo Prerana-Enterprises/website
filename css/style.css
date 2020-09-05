@@ -1611,6 +1611,8 @@ label #bars
 .about-info
 {
 	color: #474c4f;
+	font-family: 'Mulish', sans-serif;
+	font-weight: 300;
 }
 
 .about-pic
@@ -1653,6 +1655,7 @@ label #bars
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-family: 'Mulish', sans-serif;
 }
 
 .scroll
@@ -1888,6 +1891,7 @@ label #bars
 {
 	color: #001b5e;
 	font-size: 50px;
+	font-family: 'Mulish', sans-serif;
 }
 
 @media(max-width: 1200px)
@@ -2000,4 +2004,10 @@ label #bars
 .color-orange
 {
 	color: #ff3d1c;
+}
+
+.about-awards
+{
+	font-family: 'Mulish', sans-serif;
+	font-weight: normal;
 }
