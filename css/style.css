@@ -547,7 +547,7 @@ label #bars
 .subname
 {
 	font-size: 50px;
-	font-family: 'Mulish', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 600;
 	margin-bottom: 0;
 }
@@ -1612,7 +1612,7 @@ label #bars
 .about-info
 {
 	color: #474c4f;
-	font-family: 'Mulish', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
 }
 
@@ -1656,7 +1656,7 @@ label #bars
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	font-family: 'Mulish', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
 .scroll
@@ -1892,7 +1892,7 @@ label #bars
 {
 	color: #001b5e;
 	font-size: 50px;
-	font-family: 'Mulish', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
 @media(max-width: 1200px)
@@ -2009,6 +2009,6 @@ label #bars
 
 .about-awards
 {
-	font-family: 'Mulish', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: normal;
 }
