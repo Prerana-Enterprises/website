@@ -794,7 +794,7 @@ label #bars
 {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 25px;
-	color: #555;
+	color: #474c4f;
 }
 
 @media(max-width: 992px)
@@ -1789,6 +1789,7 @@ label #bars
 {
 	font-size: 18px;
 	font-family: 'Roboto Condensed', sans-serif;
+	color: #555;
 }
 
 .testimonial-height
