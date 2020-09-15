@@ -43,7 +43,7 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 0.5s;
-	transition-timing-function: linear;
+	transition-timing-function: cubic-bezier(0, 1, 0, 1);
 }
 
 @media(max-width: 870px)
