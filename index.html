@@ -83,6 +83,7 @@
 				}
 				else
 				{
+					document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'linear';
 					document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 				}
 			}
@@ -94,6 +95,7 @@
 				document.getElementById('nav').style.borderBottom = 'none';
 				if(window.innerHeight<830 && window.innerWidth<900)
 				{
+					document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'cubic-bezier(0, 1, 0, 1)';
 					document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
 				}
 				else if(window.innerHeight<830 && window.innerWidth>=900)
@@ -102,6 +104,7 @@
 				}
 				else
 				{
+					document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'linear';
 					document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 				}
 				if(window.innerWidth>870)
@@ -987,10 +990,12 @@
 	{
 		if(window.innerHeight<830 && window.innerWidth<900)
 		{
+			document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'cubic-bezier(0, 1, 0, 1)';
 			document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
 		}
 		else
 		{
+			document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'linear';
 			document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 		}
 		document.getElementById('nav').style.height = '60px';
@@ -1002,10 +1007,12 @@
 	{
 		if(window.innerHeight<830 && window.innerWidth<900)
 		{
+			document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'cubic-bezier(0, 1, 0, 1)';
 			document.getElementsByClassName('banner')[0].style.minHeight = (screen.height)+'px';
 		}
 		else
 		{
+			document.getElementsByClassName('banner')[0].style.transitionTimingFunction = 'linear';
 			document.getElementsByClassName('banner')[0].style.minHeight = '0px';
 		}
 		document.getElementById('nav').style.height = '70px';
