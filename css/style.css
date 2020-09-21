@@ -2019,3 +2019,8 @@ label #bars
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 }
+
+.home-about-img
+{
+	width: 100%;
+}
