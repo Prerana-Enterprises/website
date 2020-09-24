@@ -413,7 +413,7 @@
 			document.getElementById('message').setAttribute('readonly', '');
 			document.getElementById('pop-submit').setAttribute('disabled', '');
 			var name = document.getElementById('name').value;
-			var phone = document.getElementById('phone').value;
+			var phone = document.getElementById('country').value + '-' + document.getElementById('phone').value;
 			var email = document.getElementById('email').value;
 			var message = document.getElementById('message').value;
 			if(email=="")
@@ -526,9 +526,15 @@
             </div>
             <label for="name">Name<span class="form-required"> *</span></label>
             <input type="text" id="name" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
-            <label for="phone">Mobile Number<span class="form-required"> *</span></label>
-            <input type="tel" pattern="[+987][0-9]{9,12}" id="phone" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
-        	</br>
+            <label for="country">Mobile Number<span class="form-required"> *</span></label>
+            <div class="form-row">
+            	<div class="form-group col-2 mb-0">
+            		<input type="tel" pattern="[+][0-9]{1,2}" id="country" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="+91" autocomplete="off" value="+91" required>
+            	</div>
+            	<div class="form-group col-10 mb-0">
+            		<input type="tel" id="phone" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
+            	</div>
+            </div>
             <label for="email">Email Address</label>
             <input type="email" id="email" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
             </br>
