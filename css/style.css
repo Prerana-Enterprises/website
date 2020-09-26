@@ -916,6 +916,16 @@ label #bars
 	opacity: 0.95;
 }
 
+.footer-social-linkedin
+{
+	background: #2867B2;
+}
+
+.footer-social-facebook
+{
+	background: #3b5998;
+}
+
 .credit-box
 {
 	background: #13283a;
